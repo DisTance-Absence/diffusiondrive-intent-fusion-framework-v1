@@ -1,0 +1,503 @@
+{
+  "version": "local_actor_motion_source_audit_v1",
+  "date": "2026-10-07",
+  "read_only_audit": true,
+  "network_download_or_ssh_used": false,
+  "conclusion": "S13与S14首碰障碍均有已知非零当前标注速度，不应标为速度未知；但未来4秒的实际轨迹和持续运动尚未验证。",
+  "semantics": {
+    "velocity_xy_ego_mps": "障碍绝对速度在当前自车坐标轴中的分量，不是相对闭合速度；单位m/s。",
+    "velocity_origin": "当前记录anns.gt_velocity_3d[:2]；vehicle直接保留速度，只有非动态类别被提取器置零。",
+    "velocity_known_definition": "提取时使用的速度分量均为有限数值；不是经额外标定的置信度。",
+    "future_truth_read_by_current_export": false,
+    "estimator_lineage_limit": "沿用源标注速度；未重新推导原始速度估计器或其时间平滑机制。",
+    "frozen_guard_interpretation": "把有当前运动证据的车辆强制保持当前位置，是该几何代理的假设。全拒绝不能单独证明真实未来轨迹无解，也不能因其在动就自动放行。",
+    "persistent_identity_limit": "当前导出只有annotation_index（帧内下标），未导出稳定actor token，不可拿相邻帧相同下标直接连轨。"
+  },
+  "sources": [
+    {
+      "path": "scene-choice-inventory-v3\\inventory.json",
+      "sha256": "ce444d5bad0699990f3f903612aaaca2ccb2b591f70743cdc78494a6d54912b6"
+    },
+    {
+      "path": "intent-fusion-framework-v1\\data.json",
+      "sha256": "5b01480730f09fe4e774e36c12f542a904a82a96ed51e4bccfe1ed5ab3d5c169"
+    },
+    {
+      "path": "joystick-experiment-copy\\rule-joystick-routing-v13\\current_actor_context.jsonl",
+      "sha256": "a0e3c4d591dd867fb571aae80b80a2154e0846257881978113e1ad8415837a00"
+    },
+    {
+      "path": "joystick-experiment-copy\\rule-joystick-routing-v13\\current_actor_context.provenance.json",
+      "sha256": "623bda48272b7b789e67efbed2afff44631804dd8d3f747144ce79b2b1da8c31"
+    },
+    {
+      "path": "joystick-experiment-copy\\rule-joystick-routing-v13\\extract_current_actors.py",
+      "sha256": "11c2a9fff5bdc0107fde2bf42a26b15f2c6016034e63bf21415c5a0b32e1d561"
+    },
+    {
+      "path": "joystick-experiment-copy\\rule-joystick-routing-v13\\current_actor_audit.json",
+      "sha256": "0651827d9e4e99210dcda02c7c35c9390045d551b824b9b2d38fdf0f627b2076"
+    }
+  ],
+  "provenance_checks": {
+    "current_actor_export_hash_matches": true,
+    "extractor_hash_matches": true,
+    "current_export_frame_offsets_accessed": [
+      0
+    ],
+    "future_frames_referenced": 0,
+    "raw_fields_accessed": [
+      "token",
+      "timestamp",
+      "anns.gt_boxes",
+      "anns.gt_velocity_3d",
+      "anns.gt_names"
+    ]
+  },
+  "local_history_future_search": {
+    "matching_history_or_future_actor_track_found": false,
+    "scope": "工作区文件路径中目标token、目标log名称，以及joystick-experiment-copy下history/observation/current_actor/actor_cache等JSON；并检查目标prepared_sequences与train96 actor_inputs清单。",
+    "raw_target_navsim_logs_found_locally": false,
+    "remote_raw_log_paths_in_provenance_only": [
+      "/home/wu/datasets/navsim/trainval_navsim_logs/trainval/2021.07.16.20.45.29_veh-35_00016_00589.pkl",
+      "/home/wu/datasets/navsim/trainval_navsim_logs/trainval/2021.06.09.12.06.35_veh-35_00422_01112.pkl"
+    ],
+    "unrelated_evidence_not_used": [
+      "同trip另一段recorded_shadow的自车序列",
+      "candidate bank / optimization history中的自车预测轨迹",
+      "不含目标token的train96 actor feature bank",
+      "未来运动模型CV/CA代码本身（不是观测轨迹）"
+    ],
+    "search_limit": "未声称扫描所有二进制容器或不存在任何其他副本；未对远端原始日志做验证。"
+  },
+  "scenes": [
+    {
+      "scene_id": "S13",
+      "token": "24ea06dc271f5b9a",
+      "current_timestamp_us": 1623255455400857,
+      "record_index": 211,
+      "trip": "2021.06.09.12.06.35_veh-35",
+      "all20_rejected_by_frozen_current_actor": true,
+      "first_failure_actor_indices": [
+        5
+      ],
+      "first_failure_time_range_s": [
+        0.9655172413793103,
+        3.1538461538461537
+      ],
+      "first_failure_matches": [
+        {
+          "candidate_id": 0,
+          "time_s": 2.033333333333333,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "time_s": 1.2894736842105263,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "time_s": 2.5384615384615383,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "time_s": 1.5714285714285714,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "time_s": 1.1363636363636362,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "time_s": 1.4411764705882353,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "time_s": 2.1153846153846154,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "time_s": 2.0,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "time_s": 3.1538461538461537,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 9,
+          "time_s": 2.1666666666666665,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 10,
+          "time_s": 2.033333333333333,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "time_s": 0.9655172413793103,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 12,
+          "time_s": 1.3157894736842106,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 13,
+          "time_s": 2.1153846153846154,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 14,
+          "time_s": 2.1538461538461537,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 15,
+          "time_s": 1.8928571428571428,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 16,
+          "time_s": 1.8461538461538463,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 17,
+          "time_s": 1.6785714285714286,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 18,
+          "time_s": 2.033333333333333,
+          "actor_indices": [
+            5
+          ]
+        },
+        {
+          "candidate_id": 19,
+          "time_s": 1.8571428571428572,
+          "actor_indices": [
+            5
+          ]
+        }
+      ],
+      "current_ego_absolute_velocity_in_ego_axes_mps": [
+        4.509695724697357,
+        -0.11530397600490201
+      ],
+      "actors": [
+        {
+          "actor_list_index": 5,
+          "annotation_index": 5,
+          "current_actor": {
+            "annotation_index": 5,
+            "category": "vehicle",
+            "box_center_xy_ego_m": [
+              15.712057362908475,
+              -0.2508003584462068
+            ],
+            "length_m": 4.835132598876953,
+            "width_m": 2.103118658065796,
+            "height_m": 1.8739677667617798,
+            "heading_ego_rad": 0.022262634569191198,
+            "velocity_xy_ego_mps": [
+              4.919227208332315,
+              0.10918767365841917
+            ],
+            "velocity_known": true,
+            "is_dynamic_category": true
+          },
+          "speed_mps": 4.920438829543142,
+          "speed_kmh": 17.71357978635531,
+          "motion_evidence_status": "nonzero_current_annotation_velocity_available",
+          "motion_evidence_text": "源标注给出已知非零当前速度，支持记录时刻处于运动；不是仅凭vehicle类别推断。",
+          "future_motion_status": "not_verified_for_this_actor_and_timestamp",
+          "history_motion_status": "no_matching_actor_track_identified_in_inspected_local_sources",
+          "ego_identity_check": {
+            "category": "vehicle",
+            "ego_category_present_in_scene": false,
+            "ego_center_in_current_rear_axle_frame_m": [
+              1.461,
+              0.0
+            ],
+            "obstacle_center_m": [
+              15.712057362908475,
+              -0.2508003584462068
+            ],
+            "obstacle_is_ego_supported": false,
+            "evidence": "提取器逐字复制gt_names且断言无ego类别；目标框位于自车前方12–16米，位置和尺寸均不同于自车。"
+          }
+        }
+      ],
+      "source_export_exact_match": true,
+      "rejected_sequence_evidence": {
+        "path": "joystick-experiment-copy\\intent-routing-v2\\continuous\\prepared_sequences\\24ea06dc271f5b9a.json",
+        "reason": "文件名对应origin_frozen_development_token，但frames选自同一trip另一时间段；不是该目标时刻的actor轨迹。",
+        "contains_target_token_in_frames": false,
+        "first_frame_timestamp_us": 1623255813401479,
+        "first_frame_offset_from_target_s": 358.000622,
+        "contents": "recorded ego poses/history-token metadata; no matched obstacle identity trajectory"
+      }
+    },
+    {
+      "scene_id": "S14",
+      "token": "2ff93800f84c525a",
+      "current_timestamp_us": 1626469636100202,
+      "record_index": 63,
+      "trip": "2021.07.16.20.45.29_veh-35",
+      "all20_rejected_by_frozen_current_actor": true,
+      "first_failure_actor_indices": [
+        0
+      ],
+      "first_failure_time_range_s": [
+        0.7407407407407407,
+        2.8333333333333335
+      ],
+      "first_failure_matches": [
+        {
+          "candidate_id": 0,
+          "time_s": 1.6923076923076923,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 1,
+          "time_s": 1.0,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 2,
+          "time_s": 2.090909090909091,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 3,
+          "time_s": 1.125,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 4,
+          "time_s": 0.8269230769230769,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 5,
+          "time_s": 1.0625,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 6,
+          "time_s": 1.7692307692307692,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 7,
+          "time_s": 1.6538461538461537,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 8,
+          "time_s": 2.8333333333333335,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 9,
+          "time_s": 1.7916666666666667,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 10,
+          "time_s": 1.6923076923076923,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 11,
+          "time_s": 0.7407407407407407,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 12,
+          "time_s": 0.975,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 13,
+          "time_s": 1.7916666666666667,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 14,
+          "time_s": 1.8333333333333333,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 15,
+          "time_s": 1.5,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 16,
+          "time_s": 1.3846153846153846,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 17,
+          "time_s": 1.2,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 18,
+          "time_s": 1.6923076923076923,
+          "actor_indices": [
+            0
+          ]
+        },
+        {
+          "candidate_id": 19,
+          "time_s": 1.5,
+          "actor_indices": [
+            0
+          ]
+        }
+      ],
+      "current_ego_absolute_velocity_in_ego_axes_mps": [
+        2.4703175567521853,
+        -0.05718071794964732
+      ],
+      "actors": [
+        {
+          "actor_list_index": 0,
+          "annotation_index": 0,
+          "current_actor": {
+            "annotation_index": 0,
+            "category": "vehicle",
+            "box_center_xy_ego_m": [
+              12.823447221372737,
+              -0.09853206699583841
+            ],
+            "length_m": 4.626774787902832,
+            "width_m": 1.9123870134353638,
+            "height_m": 1.5561274290084839,
+            "heading_ego_rad": 0.00395280731818759,
+            "velocity_xy_ego_mps": [
+              4.03209192919688,
+              -0.018086704794643565
+            ],
+            "velocity_known": true,
+            "is_dynamic_category": true
+          },
+          "speed_mps": 4.032132494646591,
+          "speed_kmh": 14.515676980727727,
+          "motion_evidence_status": "nonzero_current_annotation_velocity_available",
+          "motion_evidence_text": "源标注给出已知非零当前速度，支持记录时刻处于运动；不是仅凭vehicle类别推断。",
+          "future_motion_status": "not_verified_for_this_actor_and_timestamp",
+          "history_motion_status": "no_matching_actor_track_identified_in_inspected_local_sources",
+          "ego_identity_check": {
+            "category": "vehicle",
+            "ego_category_present_in_scene": false,
+            "ego_center_in_current_rear_axle_frame_m": [
+              1.461,
+              0.0
+            ],
+            "obstacle_center_m": [
+              12.823447221372737,
+              -0.09853206699583841
+            ],
+            "obstacle_is_ego_supported": false,
+            "evidence": "提取器逐字复制gt_names且断言无ego类别；目标框位于自车前方12–16米，位置和尺寸均不同于自车。"
+          }
+        }
+      ],
+      "source_export_exact_match": true,
+      "rejected_sequence_evidence": {
+        "path": "joystick-experiment-copy\\intent-routing-v2\\continuous\\prepared_sequences\\2ff93800f84c525a.json",
+        "reason": "文件名对应origin_frozen_development_token，但frames选自同一trip另一时间段；不是该目标时刻的actor轨迹。",
+        "contains_target_token_in_frames": false,
+        "first_frame_timestamp_us": 1626469917100842,
+        "first_frame_offset_from_target_s": 281.00064,
+        "contents": "recorded ego poses/history-token metadata; no matched obstacle identity trajectory"
+      }
+    }
+  ]
+}

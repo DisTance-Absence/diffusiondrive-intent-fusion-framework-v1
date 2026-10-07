@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scene_count": 16,
+  "candidate_count": 320,
+  "candidates_logits_anchors_guards_maps_classification_unchanged": true,
+  "fixture_count": 180,
+  "legacy_fixture_count": 45,
+  "grid_count": 672,
+  "random_cases": 300,
+  "data_sha256": "4562eb1af4259e2798f2d820aed71ee4d9b97374005585d2455678495063bc81",
+  "fusion_sha256": "1d37f1d9f089ec72588fc5e04260bf92ab87bb9ed2f2a4c8f72278369adbe808",
+  "calibration_status": {
+    "status": "not_calibrated",
+    "independent_label_count": 0,
+    "reason": "No completed independent accept/reject annotations; the included 112-request template remains blank.",
+    "template": "annotation_template.json",
+    "annotation_page": "annotation.html",
+    "instructions": "标定说明.txt",
+    "report": "results/calibration_status.json",
+    "defaults_are_demonstration_only": true,
+    "sensitivity_scope": "Current scene and current command only; alpha-rho response is not success rate or parameter optimization."
+  },
+  "scope": "Engineering and mathematical verification only; not independent human labels, parameter calibration, or task-performance evidence."
+}

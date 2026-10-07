@@ -1,0 +1,11 @@
+{
+  "all_non_cli_fusion_functions_unchanged": true,
+  "function_names": [
+    "wrap_deg",
+    "direction_features",
+    "config_values",
+    "fuse_candidates"
+  ],
+  "old_sha256": "225a131cdc6f48341ddcb7bc5c5f44c2cc3a76433d1284ae2e31ea80e240a1f8",
+  "new_sha256": "ad63f5b83dc3998036a5b318ee586054f62c16fcbbc341c037834636eafe8e57"
+}

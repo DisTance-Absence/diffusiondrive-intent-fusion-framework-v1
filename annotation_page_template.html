@@ -1,0 +1,62 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>独立指令标注</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f1f5f9;color:#213b52;font:15px/1.65 'Microsoft YaHei',sans-serif}main{max-width:1200px;margin:auto;padding:24px}h1{font-size:25px;margin:0}h2{font-size:17px;margin-top:0}.card{background:white;border:1px solid #d6e0e9;border-radius:9px;padding:18px;margin:16px 0}.muted{color:#607387;font-size:13px}.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.pair{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}.pair>*{min-width:0}select,input,textarea,button{font:inherit;border:1px solid #b8c9d8;border-radius:5px;padding:7px;background:white;color:inherit}button{cursor:pointer}button:hover{background:#e8f2fa}textarea{width:100%;min-height:70px;resize:vertical}input[type=text]{width:100%}label{display:block;margin:10px 0 4px}input[type=checkbox]{width:17px;height:17px;vertical-align:middle}.primary{background:#26669d;color:white}.notice{border-left:4px solid #b08438;background:#fff8e9;padding:12px}.map{width:100%;height:auto;background:#e5ebf1}.list{display:flex;flex-wrap:wrap;gap:7px}.list button.done{background:#e0f1e7}.list button.active{outline:2px solid #3173ae}.hidden{display:none}#status{min-height:24px;font-size:13px}.error{color:#a34332}a{color:#225f96}@media(max-width:760px){main{padding:12px}.pair{grid-template-columns:1fr}.card{padding:13px}}</style>
+<main><h1>独立标注：这条外部方向指令是否应被接受</h1><p class="muted">16 个开发场景 × 7 个预设方向，共 112 项。本页仅展示当前道路及交通对象，不含模型候选、分数、筛选结果或融合输出。</p>
+<div class="notice">请求方向指未来4秒终点相对当前自车原点的位移方位，不是即时方向盘角度；不指定目标速度，也不预设10°容差。请在“预设目标”中独立写明目标区域或可接受行为范围，再依据道路、交通规则与目标判断。目标不清或缺少信号、路权、4秒可达性证据时，选择“信息不足”。不要参考融合页面给标签。</div>
+<section class="card"><div class="row"><label>场景 <select id="scene"></select></label><label>方向指令 <select id="command"></select></label><span id="progress"></span><button id="next">下一项</button></div><p id="context" class="muted"></p></section>
+<div class="pair"><section class="card"><h2>当前道路与交通对象</h2><svg id="map" class="map" viewBox="0 0 600 620" role="img" aria-label="当前道路、当前障碍和外部方向指令"></svg><p class="muted">车头前方为 0°，左正右负。蓝色虚线仅表示请求方向；灰框是当前障碍，绿色箭头表示其当前速度方向（按1秒位移绘制），均非未来真值。地图中心线也不证明某行为合法。</p><p id="limits" class="muted"></p></section>
+<section class="card"><h2 id="record-title"></h2><form id="form"><label for="label">独立判断</label><select id="label"><option value="">尚未标注</option><option value="accept">应接受：证据支持执行该请求</option><option value="reject">应拒绝：证据表明不应执行该请求</option><option value="uncertain">信息不足：暂不能判断</option></select>
+<label for="goal">预设目标／可复核的目标区域</label><textarea id="goal" placeholder="例如：通过事先指定的右侧出口区域；请写实际目标，不填模型角度误差阈值。"></textarea>
+<label for="reason">判断依据</label><textarea id="reason" placeholder="写清道路、交通或任务依据；信息不足时写明缺少什么。"></textarea>
+<label for="evidence">证据来源</label><input id="evidence" type="text" placeholder="原始道路图、交通视频时间段、目标标注文件等">
+<label for="annotator">标注者</label><input id="annotator" type="text" placeholder="姓名或固定代号">
+<label><input id="independent" type="checkbox"> 本条判断未参考模型分数、筛选结果或融合输出</label>
+<p class="muted">若之前已经看过该场景的结果，应如实说明；可请未接触结果的复核者完成最终独立标签。保存会记录实际保存时间，不会自动生成任何标签。</p>
+<div class="row"><button class="primary" type="submit">保存本条</button><button id="clear" type="button">清空本条</button></div><p id="status" role="status"></p></form></section></div>
+<section class="card"><h2>保存与交付</h2><p class="muted">页面可在本机浏览器暂存。请下载 JSON 作为正式保存；暂存失败时下载仍可用。导入只接受同一112项模板，且不改变原道路证据。分组和参数标定在填写后执行，本页不显示或搜索最优参数。</p><div class="row"><button id="download" class="primary">下载填写结果 JSON</button><label>导入已填写文件 <input id="import" type="file" accept="application/json,.json"></label><a href="标定说明.txt">标注与标定说明</a><a href="annotation_template.json">原始空白模板</a></div><p id="io-status" role="status"></p></section><section class="card"><h2>本场七条指令</h2><div id="record-list" class="list"></div></section>
+</main><script>
+'use strict';
+const original=__ANNOTATION_DATA__;
+const protocolSignature=JSON.stringify(original.instruction);
+const protocolKey=[...protocolSignature].reduce((h,c)=>Math.imul(h^c.charCodeAt(0),16777619)>>>0,2166136261).toString(16);
+const key='diffusiondrive-independent-labels-v2-'+original.identity_sha256+'-'+protocolKey;
+const writable=['split','independent_of_model_outputs','label','reason','goal','annotator_id','reviewed_at','evidence_source','label_source'];
+let doc=structuredClone(original),index=0;
+const $=id=>document.getElementById(id),esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+function loadEdits(candidate){
+ if(candidate.synthetic!==false||candidate.schema_version!==original.schema_version||JSON.stringify(candidate.instruction)!==protocolSignature)throw Error('标注协议不匹配或不是正式模板');
+ if(candidate.identity_sha256!==original.identity_sha256||candidate.context_sha256!==original.context_sha256||!Array.isArray(candidate.records)||candidate.records.length!==original.records.length)throw Error('模板身份不匹配');
+ const incoming=new Map(candidate.records.map(r=>[r.record_id,r]));if(incoming.size!==original.records.length)throw Error('条目缺失或重复');
+ const next=structuredClone(original);
+ next.records.forEach((r,i)=>{const other=incoming.get(r.record_id);if(!other||other.scene_id!==r.scene_id||other.token!==r.token||other.group_id!==r.group_id||other.command.angle_deg!==r.command.angle_deg||other.command.active!==true)throw Error('场景或指令身份不匹配');if(!['','accept','reject','uncertain'].includes(other.label))throw Error('不支持的标签');writable.forEach(k=>{r[k]=other[k]??original.records[i][k];});});
+ doc=next;
+}
+try{const cached=localStorage.getItem(key);if(cached)loadEdits(JSON.parse(cached));}catch(e){$('io-status').textContent='未恢复本机暂存：'+e.message;}
+function persist(){try{localStorage.setItem(key,JSON.stringify({synthetic:false,schema_version:doc.schema_version,instruction:doc.instruction,identity_sha256:doc.identity_sha256,context_sha256:doc.context_sha256,records:doc.records}));return true;}catch(e){$('io-status').textContent='浏览器暂存不可用，请下载JSON保存。';return false;}}
+const sidList=[...new Set(doc.records.map(r=>r.scene_id))];$('scene').innerHTML=sidList.map(s=>`<option>${s}</option>`).join('');
+function draw(context,angle){
+ const project=([x,y])=>[300-y*7,450-x*7],points=pts=>pts.map(p=>project(p).join(',')).join(' ');
+ let out='<defs><clipPath id="clip"><rect width="600" height="620"/></clipPath><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker></defs><g clip-path="url(#clip)">';
+ for(const p of context.road_context.drivable_polygons_ego){out+=`<polygon points="${points(p.exterior)}" fill="white" stroke="#b6c4d1"/>`;for(const hole of p.holes||[])out+=`<polygon points="${points(hole)}" fill="#e5ebf1"/>`;}
+ for(const p of context.road_paths||[])out+=`<polyline points="${points(p.centerline_xy)}" fill="none" stroke="#bec9d4" stroke-width="1"/>`;
+ function box(x,y,yaw,front,rear,width,color){const c=Math.cos(yaw),s=Math.sin(yaw);const corners=[[-rear,-width/2],[front,-width/2],[front,width/2],[-rear,width/2]].map(([a,b])=>[x+c*a-s*b,y+s*a+c*b]);return `<polygon points="${points(corners)}" fill="${color}" opacity=".8"/>`;}
+ for(const a of context.actor_context.actors){const [x,y]=a.box_center_xy_ego_m;if(x< -25||x>70||Math.abs(y)>45)continue;out+=box(x,y,a.heading_ego_rad,a.length_m/2,a.length_m/2,a.width_m,'#8e9dad');if(a.velocity_known&&a.velocity_xy_ego_mps){const [vx,vy]=a.velocity_xy_ego_mps,[x0,y0]=project([x,y]),[x1,y1]=project([x+vx,y+vy]);out+=`<path d="M${x0} ${y0}L${x1} ${y1}" stroke="#238c72" fill="none" marker-end="url(#arrow)"/>`;}}
+ const v=context.road_context.vehicle_parameters;out+=box(0,0,0,v.front_length,v.rear_length,v.width,'#203e59');const a=angle*Math.PI/180,[tx,ty]=project([28*Math.cos(a),28*Math.sin(a)]);out+=`<path d="M300 450L${tx} ${ty}" stroke="#2b6cad" stroke-width="3" stroke-dasharray="8 5" marker-end="url(#arrow)"/><text x="${tx+8}" y="${ty-8}" fill="#245f94">指令 ${angle}°</text><text x="310" y="477" fill="#203e59">当前自车</text></g>`;
+ $('map').innerHTML=out;
+}
+function render(){const r=doc.records[index],c=doc.contexts[r.context_id];$('scene').value=r.scene_id;
+ const peers=doc.records.filter(x=>x.scene_id===r.scene_id);$('command').innerHTML=peers.map(x=>`<option value="${x.record_id}">${x.command.angle_deg}°</option>`).join('');$('command').value=r.record_id;
+ $('progress').textContent=`已填写 ${doc.records.filter(x=>x.label).length} / ${doc.records.length}（含信息不足）`;
+ $('context').textContent=`${r.scene_id} · 当前自车速度 ${c.current_ego_speed_mps.toFixed(2)} m/s · ${r.trip}`;$('limits').textContent=c.context_limitations;$('record-title').textContent=`${r.scene_id} · 方向 ${r.command.angle_deg}°`;
+ for(const [id,field] of [['label','label'],['goal','goal'],['reason','reason'],['evidence','evidence_source'],['annotator','annotator_id']])$(id).value=r[field]||'';
+ $('independent').checked=r.independent_of_model_outputs===true;$('status').textContent=r.reviewed_at?'已记录保存时间：'+r.reviewed_at:'';draw(c,r.command.angle_deg);
+ $('record-list').innerHTML=peers.map(x=>`<button data-id="${x.record_id}" class="${x.label?'done ':''}${x.record_id===r.record_id?'active':''}">${x.command.angle_deg}° · ${({'accept':'应接受','reject':'应拒绝','uncertain':'信息不足'})[x.label]||'待标注'}</button>`).join('');
+}
+function jump(id){index=doc.records.findIndex(r=>r.record_id===id);render();}
+$('scene').onchange=()=>jump(doc.records.find(r=>r.scene_id===$('scene').value).record_id);$('command').onchange=()=>jump($('command').value);$('next').onclick=()=>{index=(index+1)%doc.records.length;render();};$('record-list').onclick=e=>{const id=e.target.dataset.id;if(id)jump(id);};
+$('form').onsubmit=e=>{e.preventDefault();const label=$('label').value,fields=['goal','reason','evidence','annotator'];if(!label||fields.some(id=>!$(id).value.trim())||!$('independent').checked){$('status').className='error';$('status').textContent='请填写判断、目标、依据、证据来源、标注者，并确认独立判断；信息不足也请说明原因。';return;}
+ const r=doc.records[index];Object.assign(r,{label,goal:$('goal').value.trim(),reason:$('reason').value.trim(),evidence_source:$('evidence').value.trim(),annotator_id:$('annotator').value.trim(),reviewed_at:new Date().toISOString(),independent_of_model_outputs:true,label_source:'human_review'});persist();render();$('status').className='';$('status').textContent='本条已记录；请下载JSON作正式保存。';};
+$('clear').onclick=()=>{const r=doc.records[index],src=original.records.find(x=>x.record_id===r.record_id);writable.forEach(k=>r[k]=src[k]);persist();render();};
+$('download').onclick=()=>{const blob=new Blob([JSON.stringify(doc,null,2)+'\n'],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='independent_intent_annotations.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('io-status').textContent='已请求下载；请保留下载文件。';};
+$('import').onchange=async()=>{try{const file=$('import').files[0];if(!file)return;loadEdits(JSON.parse(await file.text()));persist();render();$('io-status').textContent='已导入填写字段；原道路证据保持模板内容。';}catch(e){$('io-status').textContent='导入失败：'+e.message;}};
+render();
+</script></html>

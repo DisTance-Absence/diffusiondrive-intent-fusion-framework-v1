@@ -1,0 +1,4935 @@
+{
+  "interpretation": "Different protocols: time-aligned constant-velocity prediction, frozen-current boxes, and offline simulated tracking/logged future actors. Disagreement is not an error rate. Legacy current_* fields refer to the frozen comparison.",
+  "rows": [
+    {
+      "scene_id": "S01",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 1,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 4,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 5,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 11,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 12,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S01",
+      "candidate_id": 19,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 12,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S02",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 1,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 4,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 5,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S03",
+      "candidate_id": 19,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 1,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 4,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 5,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 7,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 9,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 11,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 12,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 16,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S04",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 3,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.5,
+        "DAC": 0.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 7,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 16,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S05",
+      "candidate_id": 19,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 3,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 15,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 17,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S06",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 4,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 11,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S07",
+      "candidate_id": 19,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 3,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 7,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S08",
+      "candidate_id": 19,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 1,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 4,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 7,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 11,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 12,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 16,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S09",
+      "candidate_id": 19,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 0,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 1,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 2,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 4,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 5,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 6,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 9,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 12,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 13,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 14,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 15,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 18,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S10",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 0,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 3,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 7,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 13,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 15,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 16,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 17,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 18,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S11",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 5,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 9,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 18,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S12",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 0.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 0,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 2,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 3,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 6,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 7,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 8,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 9,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 13,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 14,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 15,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 16,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 17,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 18,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S13",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 0,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 2,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 3,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 6,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 7,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 8,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 9,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 13,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 14,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 15,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 16,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 17,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 18,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S14",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 1,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 3,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 4,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.0,
+        "DAC": 0.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 5,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 10,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 11,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.0,
+        "DAC": 0.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 12,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 0.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": false,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 0.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S15",
+      "candidate_id": 19,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_intersects_frozen_current_actor"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_intersects_time_aligned_actor"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 0,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 1,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 2,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 3,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 4,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 5,
+      "current_environment_eligible": false,
+      "current_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "prediction_environment_eligible": false,
+      "prediction_reasons": [
+        "footprint_outside_drivable_union"
+      ],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 6,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 7,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 8,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 9,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 10,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 11,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 12,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 13,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 14,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 15,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 16,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 17,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 18,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    },
+    {
+      "scene_id": "S16",
+      "candidate_id": 19,
+      "current_environment_eligible": true,
+      "current_reasons": [],
+      "prediction_environment_eligible": true,
+      "prediction_reasons": [],
+      "offline_pdm_eligible": true,
+      "offline_metrics": {
+        "NC": 1.0,
+        "DAC": 1.0,
+        "TTC": 1.0
+      }
+    }
+  ],
+  "totals": {
+    "current_pass": 195,
+    "offline_pass": 262,
+    "disagreement": 85,
+    "prediction_pass": 224,
+    "prediction_vs_offline_disagreement": 50,
+    "prediction_vs_frozen_disagreement": 47
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "not_calibrated",
+  "best_config": null,
+  "validation": {
+    "status": "valid",
+    "errors": [],
+    "records": 112,
+    "groups": 16,
+    "blank": 112,
+    "completed": {},
+    "binary_labels": 0,
+    "note": "人工来源只能通过标注者声明与留存证据核验；程序不能证明是谁填写或其判断正确。"
+  },
+  "parameter_scope": "Exploratory development calibration; not a deployment safety threshold.",
+  "selection_protocol": {
+    "train_objective": "minimize (false_accept_rate + false_reject_rate) / 2",
+    "train_tie_break": [
+      "lower_false_accept_rate",
+      "higher_rejection_threshold",
+      "lower_alpha"
+    ],
+    "dev_objective": "compare only the two train-selected normalization winners by equal_class_error",
+    "dev_tie_break": [
+      "lower_false_accept_rate",
+      "sigmoid_before_softmax"
+    ],
+    "test_usage": "test label content and predictions are excluded from parameter/normalization selection; format/identity validation still applies"
+  },
+  "warnings": [
+    "仅16个历史开发场景，候选320条不是320个独立样本。",
+    "本批已多次用于开发；重划test也不能成为未接触的独立测试集。"
+  ],
+  "reason": "no_completed_independent_binary_labels",
+  "inputs": {
+    "annotations_sha256": "278a38e372f27993bdfd65815d759ad79bba8776c79caf2f5be338de7097311a",
+    "data_sha256": "4562eb1af4259e2798f2d820aed71ee4d9b97374005585d2455678495063bc81",
+    "inventory_sha256": "ce444d5bad0699990f3f903612aaaca2ccb2b591f70743cdc78494a6d54912b6"
+  }
+}

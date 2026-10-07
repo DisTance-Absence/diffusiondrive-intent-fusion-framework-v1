@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "isolatedBrowserContext": true,
+  "realAnnotationsWritten": false,
+  "calibrationFitCalled": false,
+  "syntheticFilesPersisted": false,
+  "javascriptErrors": [],
+  "validationFindings": [],
+  "checks": {
+    "initial": {
+      "records": 112,
+      "contexts": 16,
+      "blank": 112,
+      "independenceNull": true,
+      "metadataBlank": true,
+      "independenceCheckboxUnchecked": true,
+      "localStorageInitiallyEmpty": true
+    },
+    "leakage": {
+      "forbiddenEmbeddedFields": [],
+      "candidateElements": 0
+    },
+    "originalBlankValidation": {
+      "status": "valid",
+      "errors": [],
+      "records": 112,
+      "groups": 16,
+      "blank": 112,
+      "completed": {},
+      "binary_labels": 0,
+      "note": "人工来源只能通过标注者声明与留存证据核验；程序不能证明是谁填写或其判断正确。"
+    },
+    "mobileHorizontalOverflow": false,
+    "recordSwitches": 112,
+    "requiredFields": [
+      "label",
+      "goal",
+      "reason",
+      "evidence",
+      "annotator",
+      "independent"
+    ],
+    "disposableLocalStorageRestore": true,
+    "syntheticExportValidation": {
+      "status": "valid",
+      "errors": [],
+      "records": 112,
+      "groups": 16,
+      "blank": 111,
+      "completed": {
+        "uncertain": 1
+      },
+      "binary_labels": 0,
+      "note": "人工来源只能通过标注者声明与留存证据核验；程序不能证明是谁填写或其判断正确。"
+    },
+    "importRoundtrip": true,
+    "sourceContextImmutableOnImport": true,
+    "invalidIdentityAndLabelRejected": true,
+    "protocolVisible": {
+      "horizon4s": true,
+      "endpointBearing": true,
+      "explicitTargetOrBehaviorScope": true,
+      "noAutomaticAngularTolerance": true
+    },
+    "finalBrowserRecordsBlank": 112
+  },
+  "browserContextClosed": true,
+  "sourceHashes": {
+    "annotation.html": "1dcd051e9d2f9abc8687c90203b02c3f162305ad610defde7d3b40cb9ebfe9e7",
+    "annotation_template.json": "278a38e372f27993bdfd65815d759ad79bba8776c79caf2f5be338de7097311a",
+    "annotation_page_template.html": "72b07e887fcc2cc8b2aec589bcdcfe779ee7cb782dc19e1b23c63b585d81b0ef",
+    "build_annotation_page.py": "c2db86c79a580debae8e660091ef967b955e420c5449e42760b562f88ea59c74",
+    "calibration.py": "6bc9eff71aa75e6e07c481dd6cf56497e95af807ebfd8f83070f495dd4522a63"
+  },
+  "sourceUnchanged": true
+}

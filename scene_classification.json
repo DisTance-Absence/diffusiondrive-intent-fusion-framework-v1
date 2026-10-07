@@ -1,0 +1,975 @@
+{
+  "meta": {
+    "date": "2026-10-07",
+    "version": "road_structure_review_v1",
+    "categories": [
+      {
+        "id": "crossing_junction",
+        "label": "交叉路口",
+        "count": 7
+      },
+      {
+        "id": "branch_junction",
+        "label": "丁字/分岔路口",
+        "count": 4
+      },
+      {
+        "id": "roundabout",
+        "label": "环岛式道路",
+        "count": 2
+      },
+      {
+        "id": "curved_segment",
+        "label": "一般弯道路段",
+        "count": 1
+      },
+      {
+        "id": "straight_approach",
+        "label": "宽幅直路/路口接近段",
+        "count": 2
+      }
+    ],
+    "scope": "按自车当前近端道路结构分类，另注前方路口与连接阶段；同一路口中只导出部分车道后继，不影响道路结构标签。",
+    "note": "地图几何复核初分，不代表人工确认、合法变道认证或候选行为覆盖。分类仅用于浏览与分组，不进入评分或环境检查。",
+    "terminology": "可变道与可变导向/潮汐车道分别记录；当前两者均未认证。S13、S14仅列为变道潜力待核验。",
+    "review_type": "assistant_map_geometry_and_topology_review_not_human_annotation",
+    "cohort_note": "本批主要是路口与环岛相关场景，不能当作道路类型均衡或已覆盖合法变道的测试集。",
+    "overview_image": "figures/classification/overview.png"
+  },
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "token": "005552b5d8f9576e",
+      "primary_type": "crossing_junction",
+      "primary_label": "交叉路口",
+      "short_label": "四臂交叉路口",
+      "secondary_features": [
+        "四臂交叉",
+        "路口接近"
+      ],
+      "evidence": [
+        "宽视野可见当前进口、前方延续及左右横向支路；已导出中心线在路口处分开。",
+        "历史地图匹配：普通车道 LANE，ID 51365，中心线偏移 0.299 m。",
+        "当前保存 4 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "道路支路形状不代表当前车道允许所有转向；已导出路径不是全部合法走法。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S01_context.png",
+      "research_use": "用于检查左右/前向指令与候选覆盖是否匹配。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "51365",
+        "start_lane_offset_m": 0.2991851340179988,
+        "path_ids": [
+          [
+            "51365",
+            "48369"
+          ],
+          [
+            "51365",
+            "48370"
+          ],
+          [
+            "51365",
+            "51933",
+            "51128"
+          ],
+          [
+            "51365",
+            "52172"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S02",
+      "token": "0488534d5cbd53d7",
+      "primary_type": "crossing_junction",
+      "primary_label": "交叉路口",
+      "short_label": "不规则四臂路口",
+      "secondary_features": [
+        "斜交/不规则四臂",
+        "近路口连接处"
+      ],
+      "evidence": [
+        "道路可行驶区域呈四臂连接，前向支路斜接，左右支路不对称。",
+        "历史地图匹配：普通车道 LANE，ID 47561，中心线偏移 0.150 m。",
+        "当前保存 3 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "部分支路在导出地图中较短，后续连通与转向许可待查。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "medium",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S02_context.png",
+      "research_use": "用于不规则路口中的方向指令匹配。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "47561",
+        "start_lane_offset_m": 0.14962232160756933,
+        "path_ids": [
+          [
+            "47561",
+            "46882"
+          ],
+          [
+            "47561",
+            "47227"
+          ],
+          [
+            "47561",
+            "47972"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S03",
+      "token": "1c609dff4562547b",
+      "primary_type": "crossing_junction",
+      "primary_label": "交叉路口",
+      "short_label": "斜交四臂路口",
+      "secondary_features": [
+        "斜交四臂",
+        "路口接近"
+      ],
+      "evidence": [
+        "纵向道路与斜向横穿道路相交，可见四条道路臂。",
+        "历史地图匹配：普通车道 LANE，ID 18335，中心线偏移 0.267 m。",
+        "当前保存 3 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "具体车道线、车道数及各转向许可尚未核验。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S03_context.png",
+      "research_use": "用于斜交道路中指令角度与道路方向的区别分析。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "18335",
+        "start_lane_offset_m": 0.266680100440109,
+        "path_ids": [
+          [
+            "18335",
+            "20189"
+          ],
+          [
+            "18335",
+            "20190"
+          ],
+          [
+            "18335",
+            "20191"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S04",
+      "token": "1c85e587511e58c7",
+      "primary_type": "crossing_junction",
+      "primary_label": "交叉路口",
+      "short_label": "十字交叉路口",
+      "secondary_features": [
+        "四臂交叉",
+        "横向道路延伸"
+      ],
+      "evidence": [
+        "扩大视野可见左右横向道路及前后纵向连接，构成交叉路口。",
+        "历史地图匹配：普通车道 LANE，ID 47756，中心线偏移 0.399 m。",
+        "当前保存 3 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "原近景图偏向右侧；可见道路范围与候选当前可行范围应分别判断。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S04_context.png",
+      "research_use": "用于继续研究anchor精修与最终方向响应差异。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "47756",
+        "start_lane_offset_m": 0.3985446802587869,
+        "path_ids": [
+          [
+            "47756",
+            "47875"
+          ],
+          [
+            "47756",
+            "48088"
+          ],
+          [
+            "47756",
+            "48274",
+            "51169"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S05",
+      "token": "0dcf9b1ae12659d8",
+      "primary_type": "roundabout",
+      "primary_label": "环岛式道路",
+      "short_label": "环岛出口/分流段",
+      "secondary_features": [
+        "中央圆形岛",
+        "环形道路",
+        "出口/连接附近"
+      ],
+      "evidence": [
+        "更宽的可行驶区域显示中央圆形岛及环形道路，当前位置附近连接外部斜向道路。",
+        "历史地图匹配：车道连接段 LANE_CONNECTOR，ID 68818，中心线偏移 0.415 m。",
+        "当前保存 2 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "采用几何意义的环岛式标签；让行、环行方向和出口通行规则未认证。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S05_context.png",
+      "research_use": "用于环行与驶出方向意图的候选覆盖研究。",
+      "source_evidence": {
+        "start_layer": "LANE_CONNECTOR",
+        "start_lane_id": "68818",
+        "start_lane_offset_m": 0.4145506844895997,
+        "path_ids": [
+          [
+            "68818",
+            "68601",
+            "69077"
+          ],
+          [
+            "68818",
+            "68601",
+            "69289",
+            "63516",
+            "64645"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S06",
+      "token": "300253aba87250d6",
+      "primary_type": "branch_junction",
+      "primary_label": "丁字/分岔路口",
+      "short_label": "渠化斜丁字路口",
+      "secondary_features": [
+        "斜向主路",
+        "中央分隔",
+        "进口接入"
+      ],
+      "evidence": [
+        "当前进口接入一条斜向分隔道路，局部呈丁字/分岔连接。",
+        "历史地图匹配：普通车道 LANE，ID 47797，中心线偏移 1.424 m。",
+        "当前保存 3 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "起始车道匹配偏移约1.42米，接近原匹配阈值；需要重点复核自车所属车道。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "medium",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S06_context.png",
+      "research_use": "用于分岔选择，但应先复核自车车道匹配。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "47797",
+        "start_lane_offset_m": 1.4240576829663336,
+        "path_ids": [
+          [
+            "47797",
+            "52708"
+          ],
+          [
+            "47797",
+            "52931"
+          ],
+          [
+            "47797",
+            "52979"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S07",
+      "token": "4326e315f8905575",
+      "primary_type": "branch_junction",
+      "primary_label": "丁字/分岔路口",
+      "short_label": "带导流岛的侧向岔口",
+      "secondary_features": [
+        "侧向支路",
+        "三角导流岛",
+        "连接段"
+      ],
+      "evidence": [
+        "主路旁接入侧向道路，连接处有三角形非行驶岛；宽视野没有形成近端四臂交叉。",
+        "历史地图匹配：车道连接段 LANE_CONNECTOR，ID 53782，中心线偏移 0.393 m。",
+        "当前保存 2 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "起始匹配为连接段；导流岛两侧的通行方向和优先权未认证。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "medium",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S07_context.png",
+      "research_use": "用于侧向岔路与继续沿主路的方向选择。",
+      "source_evidence": {
+        "start_layer": "LANE_CONNECTOR",
+        "start_lane_id": "53782",
+        "start_lane_offset_m": 0.3930153656619043,
+        "path_ids": [
+          [
+            "53782",
+            "51990",
+            "53051",
+            "52341"
+          ],
+          [
+            "53782",
+            "51990",
+            "53612",
+            "52574"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S08",
+      "token": "6f9fd29cb1f45cf4",
+      "primary_type": "crossing_junction",
+      "primary_label": "交叉路口",
+      "short_label": "分隔式斜交路口",
+      "secondary_features": [
+        "四臂斜交",
+        "中央分隔",
+        "左向支路"
+      ],
+      "evidence": [
+        "宽视野除近景可见的左侧支路外，还能看到右侧接入道路，整体为四臂斜交结构。",
+        "历史地图匹配：普通车道 LANE，ID 52040，中心线偏移 0.205 m。",
+        "当前保存 2 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "不能根据旧近景把它判为丁字路口；道路存在支路不保证候选覆盖或合法可达。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S08_context.png",
+      "research_use": "用于模型偏好与外部直行/左向意图的融合对照。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "52040",
+        "start_lane_offset_m": 0.20520735054184805,
+        "path_ids": [
+          [
+            "52040",
+            "52856",
+            "52020"
+          ],
+          [
+            "52040",
+            "53581"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S09",
+      "token": "5cf48446b8345631",
+      "primary_type": "branch_junction",
+      "primary_label": "丁字/分岔路口",
+      "short_label": "右侧丁字/分岔路口",
+      "secondary_features": [
+        "右侧支路",
+        "支路中央分隔",
+        "主路延续"
+      ],
+      "evidence": [
+        "当前道路向前延续，右侧有一条带中央分隔的侧向道路接入。",
+        "历史地图匹配：普通车道 LANE，ID 52096，中心线偏移 0.039 m。",
+        "当前保存 2 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "侧向连接的车道边界与转向许可待查。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S09_context.png",
+      "research_use": "用于前向与右向意图选择。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "52096",
+        "start_lane_offset_m": 0.038721599859450125,
+        "path_ids": [
+          [
+            "52096",
+            "49505"
+          ],
+          [
+            "52096",
+            "53256"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S10",
+      "token": "9ed6528360cb519e",
+      "primary_type": "crossing_junction",
+      "primary_label": "交叉路口",
+      "short_label": "宽幅分隔式十字路口",
+      "secondary_features": [
+        "大型交叉口",
+        "中央分隔",
+        "宽幅道路"
+      ],
+      "evidence": [
+        "扩大视野后左右横向道路均可见，与当前纵向分隔道路构成大型四臂路口。",
+        "历史地图匹配：普通车道 LANE，ID 64591，中心线偏移 0.183 m。",
+        "当前保存 3 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "原近景仅突出右转连接；道路宽度不能直接换算成可变道数量。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S10_context.png",
+      "research_use": "用于宽幅路口中的前向/右向选择及环境拒绝分析。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "64591",
+        "start_lane_offset_m": 0.18337977677299622,
+        "path_ids": [
+          [
+            "64591",
+            "69305"
+          ],
+          [
+            "64591",
+            "70380"
+          ],
+          [
+            "64591",
+            "70423",
+            "67692"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S11",
+      "token": "81eeb93f09045e8c",
+      "primary_type": "branch_junction",
+      "primary_label": "丁字/分岔路口",
+      "short_label": "丁字路口/弯曲主路接入",
+      "secondary_features": [
+        "左右分流",
+        "弯曲主路",
+        "进口终接"
+      ],
+      "evidence": [
+        "当前进口前方接入横向道路，向左延伸，向右沿弯曲道路延续，呈丁字连接。",
+        "历史地图匹配：普通车道 LANE，ID 18319，中心线偏移 0.301 m。",
+        "当前保存 2 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "更远处另有道路连接，当前标签描述近端进口，不代表整个地图仅有三臂。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S11_context.png",
+      "research_use": "用于左右分支意图和当前候选支持不足的分析。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "18319",
+        "start_lane_offset_m": 0.301281308176278,
+        "path_ids": [
+          [
+            "18319",
+            "19962",
+            "18267"
+          ],
+          [
+            "18319",
+            "19963",
+            "19846"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S12",
+      "token": "08fac6ec47cc5d82",
+      "primary_type": "curved_segment",
+      "primary_label": "一般弯道路段",
+      "short_label": "缓弯道路段",
+      "secondary_features": [
+        "轻微连续弯曲",
+        "当前纵向车道延续",
+        "远处侧向连接"
+      ],
+      "evidence": [
+        "自车前方近端道路及中心线有连续轻微弯曲；当前截取路径沿同一LANE延续。",
+        "历史地图匹配：普通车道 LANE，ID 18285，中心线偏移 0.255 m。",
+        "当前保存 1 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "更远处有侧向连接；单条已导出路径不能证明该路只有一条车道。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S12_context.png",
+      "research_use": "用于道路跟随和不必要方向干预的对照。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "18285",
+        "start_lane_offset_m": 0.25504886501040264,
+        "path_ids": [
+          [
+            "18285"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S13",
+      "token": "24ea06dc271f5b9a",
+      "primary_type": "straight_approach",
+      "primary_label": "宽幅直路/路口接近段",
+      "short_label": "宽幅直路接近路口",
+      "secondary_features": [
+        "近端平直",
+        "分隔式宽路",
+        "前方交叉口",
+        "变道潜力待核验"
+      ],
+      "evidence": [
+        "当前近端道路平直且较宽；扩大视野可见前方大型交叉口，周边参与者呈多列分布。",
+        "历史地图匹配：普通车道 LANE，ID 64850，中心线偏移 0.340 m。",
+        "当前保存 1 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "缺少左右相邻车道及实虚线信息，不能认证可变道；也不能标为远离路口的纯直路。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": true,
+      "lane_change_note": "可作为变道候选场景复核，尚缺相邻车道、车道线及通行许可证据。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S13_context.png",
+      "research_use": "优先补查相邻车道与跨线许可，再决定是否作为变道实验场景。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "64850",
+        "start_lane_offset_m": 0.34015901885435523,
+        "path_ids": [
+          [
+            "64850"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S14",
+      "token": "2ff93800f84c525a",
+      "primary_type": "straight_approach",
+      "primary_label": "宽幅直路/路口接近段",
+      "short_label": "宽幅直路接近连接口",
+      "secondary_features": [
+        "近端平直",
+        "中央分隔",
+        "前方侧向连接",
+        "变道潜力待核验"
+      ],
+      "evidence": [
+        "当前位于较宽的纵向直路段，前方有带导流岛的侧向连接。",
+        "历史地图匹配：普通车道 LANE，ID 67148，中心线偏移 0.210 m。",
+        "当前保存 1 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "缺少相邻车道边界及跨线许可；多列车辆只提示多车道可能，不能单独认证变道。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": true,
+      "lane_change_note": "可作为变道候选场景复核，尚缺相邻车道、车道线及通行许可证据。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S14_context.png",
+      "research_use": "优先补查相邻车道与交通条件，可作为变道候选场景复核。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "67148",
+        "start_lane_offset_m": 0.2101468398275356,
+        "path_ids": [
+          [
+            "67148"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S15",
+      "token": "388821a53a675b17",
+      "primary_type": "roundabout",
+      "primary_label": "环岛式道路",
+      "short_label": "环岛内弯曲连接段",
+      "secondary_features": [
+        "中央圆形岛",
+        "环形弯道",
+        "当前连接段"
+      ],
+      "evidence": [
+        "宽视野可见中央圆形岛及围绕它的环形可行驶带；自车位于环形道路弯曲连接处。",
+        "历史地图匹配：车道连接段 LANE_CONNECTOR，ID 70155，中心线偏移 0.001 m。",
+        "当前保存 1 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "只导出一条后继路径不代表全环岛只有一种选择；当前位置邻近开口是否可驶入需另查。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S15_context.png",
+      "research_use": "用于环形道路跟随与误把道路曲率当外部转向的分析。",
+      "source_evidence": {
+        "start_layer": "LANE_CONNECTOR",
+        "start_lane_id": "70155",
+        "start_lane_offset_m": 0.0012257365574959841,
+        "path_ids": [
+          [
+            "70155",
+            "68603",
+            "69276",
+            "68586"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    },
+    {
+      "scene_id": "S16",
+      "token": "46518a9f25a35705",
+      "primary_type": "crossing_junction",
+      "primary_label": "交叉路口",
+      "short_label": "斜交四臂路口",
+      "secondary_features": [
+        "斜交四臂",
+        "道路宽度不对称",
+        "路口接近"
+      ],
+      "evidence": [
+        "纵向道路与斜向横穿道路在前方交会，宽视野可见四臂。",
+        "历史地图匹配：普通车道 LANE，ID 18237，中心线偏移 0.137 m。",
+        "当前保存 3 条纵向连接路径；数量不等于车道数，也不是完整可选行为枚举。"
+      ],
+      "uncertainties": [
+        "道路支路几何标签不代表精修候选已覆盖每个出口。",
+        "本分类依据地图几何和历史拓扑复核，尚未经人工标注确认。"
+      ],
+      "status": "provisional_map_review",
+      "confidence": "high",
+      "confidence_scope": "broad geometric road type only; not traffic permission or human annotation",
+      "lane_change_status": "unverified",
+      "lane_change_candidate": false,
+      "lane_change_note": "本轮按道路结构分类，未核验合法变道条件。",
+      "variable_direction_lane_status": "unverified",
+      "context_image": "figures/classification/S16_context.png",
+      "research_use": "用于左/前/右方向覆盖与意图响应的对照。",
+      "source_evidence": {
+        "start_layer": "LANE",
+        "start_lane_id": "18237",
+        "start_lane_offset_m": 0.1374113626829025,
+        "path_ids": [
+          [
+            "18237",
+            "20186"
+          ],
+          [
+            "18237",
+            "20187"
+          ],
+          [
+            "18237",
+            "20188"
+          ]
+        ],
+        "basis": [
+          "current_drivable_area_geometry",
+          "saved_longitudinal_map_paths",
+          "historical_map_match"
+        ],
+        "not_used": [
+          "candidate_directions",
+          "model_scores",
+          "NC_DAC_TTC",
+          "fusion_results"
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\scene-choice-inventory-v3\\inventory.json",
+      "sha256": "ce444d5bad0699990f3f903612aaaca2ccb2b591f70743cdc78494a6d54912b6"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\rule-joystick-contrast-v2\\results\\frozen\\screen_manifest_frozen.json",
+      "sha256": "6055bfdf808030c6c44a6740513c699e5704d08be14bdc1eb8f425e296fa90e7"
+    }
+  ],
+  "method": "Broader road-only map review plus map-match/topology evidence; four-second candidate endpoints are excluded from taxonomy."
+}

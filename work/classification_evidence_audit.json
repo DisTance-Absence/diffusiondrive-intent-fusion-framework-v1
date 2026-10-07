@@ -1,0 +1,1507 @@
+{
+  "status": "PASS_WITH_EXPLICIT_EVIDENCE_LIMITS",
+  "scope": "Independent read-only audit of 16-scene road-structure classification",
+  "read_candidate_geometry_or_scores_for_classification": false,
+  "source_files_modified": false,
+  "sources": {
+    "inventory": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\scene-choice-inventory-v3\\inventory.json",
+      "sha256": "ce444d5bad0699990f3f903612aaaca2ccb2b591f70743cdc78494a6d54912b6"
+    },
+    "original_map_manifest": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\rule-joystick-contrast-v2\\results\\frozen\\screen_manifest_frozen.json",
+      "sha256": "6055bfdf808030c6c44a6740513c699e5704d08be14bdc1eb8f425e296fa90e7"
+    },
+    "long_map_manifest": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\direction-acceleration-audit-v1\\active_manifest.json",
+      "sha256": "5da92b6dedc7df3087ee288cac2df30e7941a385635d6caa71b30b3323aec747"
+    },
+    "screen_extractor": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\rule-joystick-contrast-v2\\screen_contrast_scenes.py",
+      "sha256": "844a3f4e064448f8c525eceb0ce4a07a66c6af00fffe5e24ffda55b4a8d0e4ca"
+    },
+    "long_map_extractor": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\direction-acceleration-audit-v1\\extract_spatial_maps_v2.py",
+      "sha256": "c0e15a2f0c3381c00f60b28239f308979124e68301fc12ea3754198a7b183db6"
+    },
+    "road_context_provenance": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\rule-joystick-routing-v13\\current_road_context.provenance.json",
+      "sha256": "58fb30bdf15c9de1a32c9c9c59a391aa59d7d18d694b4519f1f17fb83a4f021c"
+    },
+    "geometry_review_figure": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\work\\classification_context.png",
+      "sha256": "c2aaefe257940d5c1284257ce258b343a19312f6bff81a898980d7966371d9c3"
+    }
+  },
+  "group_counts": {
+    "crossing_junction": 7,
+    "branch_junction": 4,
+    "roundabout": 2,
+    "curved_segment": 1,
+    "straight_approach": 2
+  },
+  "groups": {
+    "crossing_junction": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S08",
+      "S10",
+      "S16"
+    ],
+    "branch_junction": [
+      "S06",
+      "S07",
+      "S09",
+      "S11"
+    ],
+    "roundabout": [
+      "S05",
+      "S15"
+    ],
+    "curved_segment": [
+      "S12"
+    ],
+    "straight_approach": [
+      "S13",
+      "S14"
+    ]
+  },
+  "identity_join_validation": {
+    "all_16_token_trip_record_global_pose_match": true,
+    "all_16_legacy_path_id_sequences_match": true,
+    "longer_80m_map_overlap_count": 6
+  },
+  "source_code_evidence": [
+    {
+      "source": "screen_extractor",
+      "lines": [
+        133,
+        143
+      ],
+      "finding": "3m proximal query; centerline offset <=1.5m and heading <=25deg; min(distance+heading radians,id). No edge polygon containment."
+    },
+    {
+      "source": "screen_extractor",
+      "lines": [
+        108,
+        126
+      ],
+      "finding": "Only directed outgoing_edges topology; excludes current red and repeated IDs; edge/path/successor caps; no lateral adjacency."
+    },
+    {
+      "source": "screen_extractor",
+      "lines": [
+        121,
+        121
+      ],
+      "finding": "branch_gate_s equals accumulated centerline distance +2m at first retained multiple successor edge."
+    },
+    {
+      "source": "screen_extractor",
+      "lines": [
+        146,
+        155
+      ],
+      "finding": "Old exported scope depends on current speed and filters endpoint direction; exported path count is not lane count or exhaustive roads."
+    },
+    {
+      "source": "road_context_provenance",
+      "lines": [
+        64,
+        70
+      ],
+      "finding": "Current HD map/localization only. ROADBLOCK/INTERSECTION/CARPARK_AREA union discards individual layer-polygon membership."
+    },
+    {
+      "source": "long_map_extractor",
+      "lines": [
+        419,
+        431
+      ],
+      "finding": "80m current-map reachability: no future frames, model, anchors, speed-direction or signal filtering; explicit not independent safety/legal certificate."
+    }
+  ],
+  "limitations": [
+    "Counts of INTERSECTION objects in a 200m query do not establish current intersection occupancy.",
+    "Road union morphology supports coarse geometric classes; semantic intersection membership, legal traffic permissions and exact intersection distances require original per-object map polygons/metadata.",
+    "Several final trajectories do not establish several lanes. Several outgoing centerlines establish forward reachability only, not legal lateral lane changes.",
+    "Short, speed-filtered export can omit roads and later junctions. S13 and S14 illustrate this using independent longer current-map exports.",
+    "High confidence applies to broad visual morphology, not traffic-law certification or complete legal manoeuvre set.",
+    "Manual-style review is by the assistant; human/domain confirmation is still pending."
+  ],
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "token": "005552b5d8f9576e",
+      "trip": "2021.09.15.14.00.15_veh-28",
+      "split": "dev",
+      "map": "us-ma-boston",
+      "suggested_primary_class": "crossing_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Four arms apparent in road-union geometry; current LANE has forward split.",
+      "matched_start_edge_id": "51365",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.2991851340179988,
+      "matched_heading_error_deg": 3.6520432947754005,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 4,
+      "legacy_exported_path_edge_ids": [
+        [
+          "51365",
+          "48369"
+        ],
+        [
+          "51365",
+          "48370"
+        ],
+        [
+          "51365",
+          "51933",
+          "51128"
+        ],
+        [
+          "51365",
+          "52172"
+        ]
+      ],
+      "legacy_branch_gate_s": 13.14553879637182,
+      "approx_first_retained_forward_topology_branch_distance_m": 11.14553879637182,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 58,
+        "INTERSECTION": 19,
+        "CARPARK_AREA": 13
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": {
+        "path_count": 4,
+        "spatial_horizon_m": 80.0,
+        "enumeration": {
+          "horizon_m": 80.0,
+          "max_paths": 128,
+          "max_edges": 64,
+          "max_search_nodes": 50000,
+          "search_nodes": 9,
+          "cycle_edges_skipped": 0,
+          "edge_cap_leaves": 0,
+          "duplicate_edge_sequences": 0,
+          "path_cap_truncated": false,
+          "search_node_cap_truncated": false,
+          "n_paths": 4,
+          "enumeration_truncated": false,
+          "simple_paths_only": true,
+          "geometrically_complete_up_to_horizon_subject_to_cycles_and_caps": true,
+          "red_unknown_signal_paths_retained": true,
+          "direction_or_speed_filter_used": false
+        },
+        "unique_edge_intervals": [
+          {
+            "edge_id": "51365",
+            "source_entry_s": -16.241928656113853,
+            "source_exit_s": 11.14553879637182,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "48369",
+            "source_entry_s": 11.14553879637182,
+            "source_exit_s": 39.5369689588868,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "48370",
+            "source_entry_s": 11.14553879637182,
+            "source_exit_s": 39.76402308242094,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51933",
+            "source_entry_s": 11.14553879637182,
+            "source_exit_s": 26.948583449469567,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "52172",
+            "source_entry_s": 11.14553879637182,
+            "source_exit_s": 40.73521081517045,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51128",
+            "source_entry_s": 26.948583449469567,
+            "source_exit_s": 34.63092147381312,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "48251",
+            "source_entry_s": 39.5369689588868,
+            "source_exit_s": 107.23046899686291,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "48250",
+            "source_entry_s": 39.76402308242094,
+            "source_exit_s": 107.32105108641744,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51317",
+            "source_entry_s": 40.73521081517045,
+            "source_exit_s": 67.02837617656017,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          }
+        ],
+        "note": "Entry/exit arclength from matched ego projection. Future along-road position is current map evidence, not future vehicle observation. Edge IDs are not automatically lane-connector types."
+      }
+    },
+    {
+      "scene_id": "S02",
+      "token": "0488534d5cbd53d7",
+      "trip": "2021.10.01.15.32.11_veh-28",
+      "split": "dev",
+      "map": "us-ma-boston",
+      "suggested_primary_class": "crossing_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "medium",
+      "classification_is_provisional": true,
+      "reason": "Crossing-like multi-arm geometry; skewed/irregular arm shapes, so no precise orthogonal-crossroad claim.",
+      "matched_start_edge_id": "47561",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.14962232160756933,
+      "matched_heading_error_deg": 0.045953433206508534,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 3,
+      "legacy_exported_path_edge_ids": [
+        [
+          "47561",
+          "46882"
+        ],
+        [
+          "47561",
+          "47227"
+        ],
+        [
+          "47561",
+          "47972"
+        ]
+      ],
+      "legacy_branch_gate_s": 2.626269321842642,
+      "approx_first_retained_forward_topology_branch_distance_m": 0.6262693218426421,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 55,
+        "INTERSECTION": 18,
+        "CARPARK_AREA": 13
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": {
+        "path_count": 3,
+        "spatial_horizon_m": 80.0,
+        "enumeration": {
+          "horizon_m": 80.0,
+          "max_paths": 128,
+          "max_edges": 64,
+          "max_search_nodes": 50000,
+          "search_nodes": 9,
+          "cycle_edges_skipped": 0,
+          "edge_cap_leaves": 0,
+          "duplicate_edge_sequences": 0,
+          "path_cap_truncated": false,
+          "search_node_cap_truncated": false,
+          "n_paths": 3,
+          "enumeration_truncated": false,
+          "simple_paths_only": true,
+          "geometrically_complete_up_to_horizon_subject_to_cycles_and_caps": true,
+          "red_unknown_signal_paths_retained": true,
+          "direction_or_speed_filter_used": false
+        },
+        "unique_edge_intervals": [
+          {
+            "edge_id": "47561",
+            "source_entry_s": -80.14126901374964,
+            "source_exit_s": 0.6262693218426421,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "46882",
+            "source_entry_s": 0.6262693218426421,
+            "source_exit_s": 22.38123282534507,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "47227",
+            "source_entry_s": 0.6262693218426421,
+            "source_exit_s": 29.730194154269036,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "47972",
+            "source_entry_s": 0.6262693218426421,
+            "source_exit_s": 23.934659656160495,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51828",
+            "source_entry_s": 22.38123282534507,
+            "source_exit_s": 57.628984744800434,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51297",
+            "source_entry_s": 23.934659656160495,
+            "source_exit_s": 38.90960711771735,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51580",
+            "source_entry_s": 29.730194154269036,
+            "source_exit_s": 43.36626949930732,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51962",
+            "source_entry_s": 57.628984744800434,
+            "source_exit_s": 75.0181559503628,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "51784",
+            "source_entry_s": 75.0181559503628,
+            "source_exit_s": 172.99032033875014,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          }
+        ],
+        "note": "Entry/exit arclength from matched ego projection. Future along-road position is current map evidence, not future vehicle observation. Edge IDs are not automatically lane-connector types."
+      }
+    },
+    {
+      "scene_id": "S03",
+      "token": "1c609dff4562547b",
+      "trip": "2021.08.17.18.44.32_veh-08",
+      "split": "dev",
+      "map": "us-pa-pittsburgh-hazelwood",
+      "suggested_primary_class": "crossing_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Four arms apparent, skewed crossing.",
+      "matched_start_edge_id": "18335",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.266680100440109,
+      "matched_heading_error_deg": 3.0943556901167883,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 3,
+      "legacy_exported_path_edge_ids": [
+        [
+          "18335",
+          "20189"
+        ],
+        [
+          "18335",
+          "20190"
+        ],
+        [
+          "18335",
+          "20191"
+        ]
+      ],
+      "legacy_branch_gate_s": 8.018445959736312,
+      "approx_first_retained_forward_topology_branch_distance_m": 6.018445959736312,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 81,
+        "INTERSECTION": 26,
+        "CARPARK_AREA": 92
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S04",
+      "token": "1c85e587511e58c7",
+      "trip": "2021.08.31.16.37.21_veh-40",
+      "split": "dev",
+      "map": "us-ma-boston",
+      "suggested_primary_class": "crossing_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Four arms apparent, with local side-access geometry.",
+      "matched_start_edge_id": "47756",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.3985446802587869,
+      "matched_heading_error_deg": 1.4729033717233213,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 3,
+      "legacy_exported_path_edge_ids": [
+        [
+          "47756",
+          "47875"
+        ],
+        [
+          "47756",
+          "48088"
+        ],
+        [
+          "47756",
+          "48274",
+          "51169"
+        ]
+      ],
+      "legacy_branch_gate_s": 6.818089096311404,
+      "approx_first_retained_forward_topology_branch_distance_m": 4.818089096311404,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 86,
+        "INTERSECTION": 26,
+        "CARPARK_AREA": 27
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S05",
+      "token": "0dcf9b1ae12659d8",
+      "trip": "2021.06.09.17.23.18_veh-38",
+      "split": "dev",
+      "map": "us-nv-las-vegas-strip",
+      "suggested_primary_class": "roundabout",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Circular central island and curved surrounding carriageway apparent; matched LANE_CONNECTOR.",
+      "matched_start_edge_id": "68818",
+      "matched_start_layer": "LANE_CONNECTOR",
+      "matched_centerline_offset_m": 0.4145506844895997,
+      "matched_heading_error_deg": 1.070179909177718,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 2,
+      "legacy_exported_path_edge_ids": [
+        [
+          "68818",
+          "68601",
+          "69077"
+        ],
+        [
+          "68818",
+          "68601",
+          "69289",
+          "63516",
+          "64645"
+        ]
+      ],
+      "legacy_branch_gate_s": 10.790297023463346,
+      "approx_first_retained_forward_topology_branch_distance_m": 8.790297023463346,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 45,
+        "INTERSECTION": 32,
+        "CARPARK_AREA": 1
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": {
+        "path_count": 5,
+        "spatial_horizon_m": 80.0,
+        "enumeration": {
+          "horizon_m": 80.0,
+          "max_paths": 128,
+          "max_edges": 64,
+          "max_search_nodes": 50000,
+          "search_nodes": 25,
+          "cycle_edges_skipped": 0,
+          "edge_cap_leaves": 0,
+          "duplicate_edge_sequences": 0,
+          "path_cap_truncated": false,
+          "search_node_cap_truncated": false,
+          "n_paths": 5,
+          "enumeration_truncated": false,
+          "simple_paths_only": true,
+          "geometrically_complete_up_to_horizon_subject_to_cycles_and_caps": true,
+          "red_unknown_signal_paths_retained": true,
+          "direction_or_speed_filter_used": false
+        },
+        "unique_edge_intervals": [
+          {
+            "edge_id": "68818",
+            "source_entry_s": -3.5439401400920887,
+            "source_exit_s": 5.9012144361754455,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68601",
+            "source_entry_s": 5.9012144361754455,
+            "source_exit_s": 8.790297023463346,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69077",
+            "source_entry_s": 8.790297023463346,
+            "source_exit_s": 29.426774317928455,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69289",
+            "source_entry_s": 8.790297023463346,
+            "source_exit_s": 21.268784955993752,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "63516",
+            "source_entry_s": 21.268784955993752,
+            "source_exit_s": 25.70544082940326,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "64645",
+            "source_entry_s": 25.70544082940326,
+            "source_exit_s": 43.88817761300837,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "64646",
+            "source_entry_s": 25.70544082940326,
+            "source_exit_s": 44.6777544347551,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68577",
+            "source_entry_s": 29.426774317928455,
+            "source_exit_s": 50.58855176184997,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68562",
+            "source_entry_s": 43.88817761300837,
+            "source_exit_s": 52.111688235160685,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68590",
+            "source_entry_s": 44.6777544347551,
+            "source_exit_s": 52.96154233374989,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68754",
+            "source_entry_s": 50.58855176184997,
+            "source_exit_s": 66.67987776062483,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "70104",
+            "source_entry_s": 50.58855176184997,
+            "source_exit_s": 60.79915923318782,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "70404",
+            "source_entry_s": 52.111688235160685,
+            "source_exit_s": 59.82840701609096,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69580",
+            "source_entry_s": 52.96154233374989,
+            "source_exit_s": 62.27046547225242,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68598",
+            "source_entry_s": 59.82840701609096,
+            "source_exit_s": 65.05958293921988,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68491",
+            "source_entry_s": 60.79915923318782,
+            "source_exit_s": 67.18034334904607,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68599",
+            "source_entry_s": 62.27046547225242,
+            "source_exit_s": 68.30071205750963,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69618",
+            "source_entry_s": 65.05958293921988,
+            "source_exit_s": 77.36864925471421,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "63281",
+            "source_entry_s": 66.67987776062483,
+            "source_exit_s": 79.32069054609761,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "64352",
+            "source_entry_s": 67.18034334904607,
+            "source_exit_s": 73.16213631038667,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69674",
+            "source_entry_s": 68.30071205750963,
+            "source_exit_s": 80.92625736270529,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69873",
+            "source_entry_s": 68.30071205750963,
+            "source_exit_s": 84.08777328497152,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68553",
+            "source_entry_s": 73.16213631038667,
+            "source_exit_s": 106.81564815449663,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68561",
+            "source_entry_s": 77.36864925471421,
+            "source_exit_s": 82.72050734547875,
+            "speed_limit_mps": 4.470272686633884,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "68866",
+            "source_entry_s": 79.32069054609761,
+            "source_exit_s": 135.55928978841095,
+            "speed_limit_mps": 13.410818059901654,
+            "has_traffic_lights": true,
+            "signal_state": "red"
+          }
+        ],
+        "note": "Entry/exit arclength from matched ego projection. Future along-road position is current map evidence, not future vehicle observation. Edge IDs are not automatically lane-connector types."
+      }
+    },
+    {
+      "scene_id": "S06",
+      "token": "300253aba87250d6",
+      "trip": "2021.10.01.13.28.54_veh-28",
+      "split": "dev",
+      "map": "us-ma-boston",
+      "suggested_primary_class": "branch_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "medium",
+      "classification_is_provisional": true,
+      "reason": "Branch/join geometry at divided road; initial centerline offset 1.424 m near 1.5 m matching cutoff merits localization review.",
+      "matched_start_edge_id": "47797",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 1.4240576829663336,
+      "matched_heading_error_deg": 0.009851919954165516,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 3,
+      "legacy_exported_path_edge_ids": [
+        [
+          "47797",
+          "52708"
+        ],
+        [
+          "47797",
+          "52931"
+        ],
+        [
+          "47797",
+          "52979"
+        ]
+      ],
+      "legacy_branch_gate_s": 3.7972860460403215,
+      "approx_first_retained_forward_topology_branch_distance_m": 1.7972860460403215,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 79,
+        "INTERSECTION": 28,
+        "CARPARK_AREA": 21
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [
+        "near_match_offset_cutoff"
+      ],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S07",
+      "token": "4326e315f8905575",
+      "trip": "2021.10.05.04.03.05_veh-50",
+      "split": "dev",
+      "map": "sg-one-north",
+      "suggested_primary_class": "branch_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "medium",
+      "classification_is_provisional": true,
+      "reason": "Branch/join geometry with triangular separator; matched LANE_CONNECTOR, exact intersection membership not stored.",
+      "matched_start_edge_id": "53782",
+      "matched_start_layer": "LANE_CONNECTOR",
+      "matched_centerline_offset_m": 0.3930153656619043,
+      "matched_heading_error_deg": 0.9584247475241826,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 2,
+      "legacy_exported_path_edge_ids": [
+        [
+          "53782",
+          "51990",
+          "53051",
+          "52341"
+        ],
+        [
+          "53782",
+          "51990",
+          "53612",
+          "52574"
+        ]
+      ],
+      "legacy_branch_gate_s": 13.711475415146328,
+      "approx_first_retained_forward_topology_branch_distance_m": 11.711475415146328,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 50,
+        "INTERSECTION": 18
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S08",
+      "token": "6f9fd29cb1f45cf4",
+      "trip": "2021.10.05.06.24.06_veh-50",
+      "split": "dev",
+      "map": "sg-one-north",
+      "suggested_primary_class": "crossing_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Four road arms apparent in wide road-union view although only two filtered outgoing paths exported.",
+      "matched_start_edge_id": "52040",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.20520735054184805,
+      "matched_heading_error_deg": 7.558958842523947,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 2,
+      "legacy_exported_path_edge_ids": [
+        [
+          "52040",
+          "52856",
+          "52020"
+        ],
+        [
+          "52040",
+          "53581"
+        ]
+      ],
+      "legacy_branch_gate_s": 2.0954307459657855,
+      "approx_first_retained_forward_topology_branch_distance_m": 0.09543074596578549,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 82,
+        "INTERSECTION": 30
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S09",
+      "token": "5cf48446b8345631",
+      "trip": "2021.10.05.07.10.04_veh-52",
+      "split": "dev",
+      "map": "sg-one-north",
+      "suggested_primary_class": "branch_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "medium",
+      "classification_is_provisional": true,
+      "reason": "Side branch/join geometry; not certified T-junction regulation.",
+      "matched_start_edge_id": "52096",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.038721599859450125,
+      "matched_heading_error_deg": 0.0912103480919602,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 2,
+      "legacy_exported_path_edge_ids": [
+        [
+          "52096",
+          "49505"
+        ],
+        [
+          "52096",
+          "53256"
+        ]
+      ],
+      "legacy_branch_gate_s": 2.6273720176483533,
+      "approx_first_retained_forward_topology_branch_distance_m": 0.6273720176483533,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 107,
+        "INTERSECTION": 50
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": {
+        "path_count": 3,
+        "spatial_horizon_m": 80.0,
+        "enumeration": {
+          "horizon_m": 80.0,
+          "max_paths": 128,
+          "max_edges": 64,
+          "max_search_nodes": 50000,
+          "search_nodes": 9,
+          "cycle_edges_skipped": 0,
+          "edge_cap_leaves": 0,
+          "duplicate_edge_sequences": 0,
+          "path_cap_truncated": false,
+          "search_node_cap_truncated": false,
+          "n_paths": 3,
+          "enumeration_truncated": false,
+          "simple_paths_only": true,
+          "geometrically_complete_up_to_horizon_subject_to_cycles_and_caps": true,
+          "red_unknown_signal_paths_retained": true,
+          "direction_or_speed_filter_used": false
+        },
+        "unique_edge_intervals": [
+          {
+            "edge_id": "52096",
+            "source_entry_s": -15.7385777353042,
+            "source_exit_s": 0.6273720176483533,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "49505",
+            "source_entry_s": 0.6273720176483533,
+            "source_exit_s": 29.34083555583058,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "53256",
+            "source_entry_s": 0.6273720176483533,
+            "source_exit_s": 27.998694098191983,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "48679",
+            "source_entry_s": 27.998694098191983,
+            "source_exit_s": 82.54598115859523,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "52157",
+            "source_entry_s": 29.34083555583058,
+            "source_exit_s": 65.41245452194394,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "53398",
+            "source_entry_s": 65.41245452194394,
+            "source_exit_s": 77.98258483911275,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "53448",
+            "source_entry_s": 65.41245452194394,
+            "source_exit_s": 73.74456559412296,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "49207",
+            "source_entry_s": 73.74456559412296,
+            "source_exit_s": 102.75409755520965,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "52143",
+            "source_entry_s": 77.98258483911275,
+            "source_exit_s": 95.96246073720432,
+            "speed_limit_mps": null,
+            "has_traffic_lights": false,
+            "signal_state": null
+          }
+        ],
+        "note": "Entry/exit arclength from matched ego projection. Future along-road position is current map evidence, not future vehicle observation. Edge IDs are not automatically lane-connector types."
+      }
+    },
+    {
+      "scene_id": "S10",
+      "token": "9ed6528360cb519e",
+      "trip": "2021.06.14.16.48.02_veh-12",
+      "split": "dev",
+      "map": "us-nv-las-vegas-strip",
+      "suggested_primary_class": "crossing_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Large crossing with medians apparent; filtered centerlines do not show all geometric arms.",
+      "matched_start_edge_id": "64591",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.18337977677299622,
+      "matched_heading_error_deg": 0.30240492607028363,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 3,
+      "legacy_exported_path_edge_ids": [
+        [
+          "64591",
+          "69305"
+        ],
+        [
+          "64591",
+          "70380"
+        ],
+        [
+          "64591",
+          "70423",
+          "67692"
+        ]
+      ],
+      "legacy_branch_gate_s": 6.8870897095578165,
+      "approx_first_retained_forward_topology_branch_distance_m": 4.8870897095578165,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 56,
+        "INTERSECTION": 33,
+        "CARPARK_AREA": 8
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S11",
+      "token": "81eeb93f09045e8c",
+      "trip": "2021.08.17.18.54.02_veh-45",
+      "split": "dev",
+      "map": "us-pa-pittsburgh-hazelwood",
+      "suggested_primary_class": "branch_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "medium",
+      "classification_is_provisional": true,
+      "reason": "Branch/join geometry on curved continuation; exact intersection membership not stored.",
+      "matched_start_edge_id": "18319",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.301281308176278,
+      "matched_heading_error_deg": 5.588468480910155,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 2,
+      "legacy_exported_path_edge_ids": [
+        [
+          "18319",
+          "19962",
+          "18267"
+        ],
+        [
+          "18319",
+          "19963",
+          "19846"
+        ]
+      ],
+      "legacy_branch_gate_s": 2.6946028261028516,
+      "approx_first_retained_forward_topology_branch_distance_m": 0.6946028261028516,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 41,
+        "INTERSECTION": 14,
+        "CARPARK_AREA": 33
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S12",
+      "token": "08fac6ec47cc5d82",
+      "trip": "2021.08.24.15.09.18_veh-45",
+      "split": "dev",
+      "map": "us-pa-pittsburgh-hazelwood",
+      "suggested_primary_class": "curved_segment",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "medium",
+      "classification_is_provisional": true,
+      "reason": "Current curved road segment; side access visible farther ahead, so label does not assert absence of nearby junctions.",
+      "matched_start_edge_id": "18285",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.25504886501040264,
+      "matched_heading_error_deg": 0.7254313946004832,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 1,
+      "legacy_exported_path_edge_ids": [
+        [
+          "18285"
+        ]
+      ],
+      "legacy_branch_gate_s": null,
+      "approx_first_retained_forward_topology_branch_distance_m": null,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 52,
+        "INTERSECTION": 18,
+        "CARPARK_AREA": 30
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S13",
+      "token": "24ea06dc271f5b9a",
+      "trip": "2021.06.09.12.06.35_veh-35",
+      "split": "dev",
+      "map": "us-nv-las-vegas-strip",
+      "suggested_primary_class": "straight_approach",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Current straight approach to large crossing visible farther ahead; 80 m map provides later signal-controlled edge.",
+      "matched_start_edge_id": "64850",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.34015901885435523,
+      "matched_heading_error_deg": 0.13363310088702254,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 1,
+      "legacy_exported_path_edge_ids": [
+        [
+          "64850"
+        ]
+      ],
+      "legacy_branch_gate_s": null,
+      "approx_first_retained_forward_topology_branch_distance_m": null,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 46,
+        "INTERSECTION": 34,
+        "CARPARK_AREA": 4
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": {
+        "path_count": 1,
+        "spatial_horizon_m": 80.0,
+        "enumeration": {
+          "horizon_m": 80.0,
+          "max_paths": 128,
+          "max_edges": 64,
+          "max_search_nodes": 50000,
+          "search_nodes": 2,
+          "cycle_edges_skipped": 0,
+          "edge_cap_leaves": 0,
+          "duplicate_edge_sequences": 0,
+          "path_cap_truncated": false,
+          "search_node_cap_truncated": false,
+          "n_paths": 1,
+          "enumeration_truncated": false,
+          "simple_paths_only": true,
+          "geometrically_complete_up_to_horizon_subject_to_cycles_and_caps": true,
+          "red_unknown_signal_paths_retained": true,
+          "direction_or_speed_filter_used": false
+        },
+        "unique_edge_intervals": [
+          {
+            "edge_id": "64850",
+            "source_entry_s": -33.675321862345015,
+            "source_exit_s": 33.05578579739016,
+            "speed_limit_mps": 15.645954403218596,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69350",
+            "source_entry_s": 33.05578579739016,
+            "source_exit_s": 90.7008379172565,
+            "speed_limit_mps": 15.645954403218596,
+            "has_traffic_lights": true,
+            "signal_state": "non_red"
+          }
+        ],
+        "note": "Entry/exit arclength from matched ego projection. Future along-road position is current map evidence, not future vehicle observation. Edge IDs are not automatically lane-connector types."
+      }
+    },
+    {
+      "scene_id": "S14",
+      "token": "2ff93800f84c525a",
+      "trip": "2021.07.16.20.45.29_veh-35",
+      "split": "dev",
+      "map": "us-nv-las-vegas-strip",
+      "suggested_primary_class": "straight_approach",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "medium",
+      "classification_is_provisional": true,
+      "reason": "Current straight approach with later connecting geometry; 80 m map provides future edge boundaries.",
+      "matched_start_edge_id": "67148",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.2101468398275356,
+      "matched_heading_error_deg": 0.48273101467830354,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 1,
+      "legacy_exported_path_edge_ids": [
+        [
+          "67148"
+        ]
+      ],
+      "legacy_branch_gate_s": null,
+      "approx_first_retained_forward_topology_branch_distance_m": null,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 41,
+        "INTERSECTION": 30
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": {
+        "path_count": 1,
+        "spatial_horizon_m": 80.0,
+        "enumeration": {
+          "horizon_m": 80.0,
+          "max_paths": 128,
+          "max_edges": 64,
+          "max_search_nodes": 50000,
+          "search_nodes": 4,
+          "cycle_edges_skipped": 0,
+          "edge_cap_leaves": 0,
+          "duplicate_edge_sequences": 0,
+          "path_cap_truncated": false,
+          "search_node_cap_truncated": false,
+          "n_paths": 1,
+          "enumeration_truncated": false,
+          "simple_paths_only": true,
+          "geometrically_complete_up_to_horizon_subject_to_cycles_and_caps": true,
+          "red_unknown_signal_paths_retained": true,
+          "direction_or_speed_filter_used": false
+        },
+        "unique_edge_intervals": [
+          {
+            "edge_id": "67148",
+            "source_entry_s": -24.70762461207296,
+            "source_exit_s": 32.50675753639422,
+            "speed_limit_mps": 13.410818059901654,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "69976",
+            "source_entry_s": 32.50675753639422,
+            "source_exit_s": 45.89621496863758,
+            "speed_limit_mps": 13.410818059901654,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "63125",
+            "source_entry_s": 45.89621496863758,
+            "source_exit_s": 53.956855967032766,
+            "speed_limit_mps": 13.410818059901654,
+            "has_traffic_lights": false,
+            "signal_state": null
+          },
+          {
+            "edge_id": "70551",
+            "source_entry_s": 53.956855967032766,
+            "source_exit_s": 151.58083761001149,
+            "speed_limit_mps": 13.410818059901654,
+            "has_traffic_lights": true,
+            "signal_state": "non_red"
+          }
+        ],
+        "note": "Entry/exit arclength from matched ego projection. Future along-road position is current map evidence, not future vehicle observation. Edge IDs are not automatically lane-connector types."
+      }
+    },
+    {
+      "scene_id": "S15",
+      "token": "388821a53a675b17",
+      "trip": "2021.06.14.17.26.26_veh-38",
+      "split": "dev",
+      "map": "us-nv-las-vegas-strip",
+      "suggested_primary_class": "roundabout",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Circular central island apparent; current matched LANE_CONNECTOR follows its curved side.",
+      "matched_start_edge_id": "70155",
+      "matched_start_layer": "LANE_CONNECTOR",
+      "matched_centerline_offset_m": 0.0012257365574959841,
+      "matched_heading_error_deg": 3.127625026539051,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 1,
+      "legacy_exported_path_edge_ids": [
+        [
+          "70155",
+          "68603",
+          "69276",
+          "68586"
+        ]
+      ],
+      "legacy_branch_gate_s": null,
+      "approx_first_retained_forward_topology_branch_distance_m": null,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 42,
+        "INTERSECTION": 27,
+        "CARPARK_AREA": 1
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    },
+    {
+      "scene_id": "S16",
+      "token": "46518a9f25a35705",
+      "trip": "2021.08.17.13.10.50_veh-08",
+      "split": "dev",
+      "map": "us-pa-pittsburgh-hazelwood",
+      "suggested_primary_class": "crossing_junction",
+      "classification_basis": "Manual-style morphology review of current drivable road union plus exported directed centerlines; no candidate trajectories or performance used.",
+      "geometry_class_confidence": "high",
+      "classification_is_provisional": true,
+      "reason": "Skewed four-arm crossing geometry with forward split.",
+      "matched_start_edge_id": "18237",
+      "matched_start_layer": "LANE",
+      "matched_centerline_offset_m": 0.1374113626829025,
+      "matched_heading_error_deg": 0.06131428871223158,
+      "matched_edge_polygon_containment_confirmed": false,
+      "current_intersection_polygon_membership": null,
+      "nearest_intersection_distance_m": null,
+      "legacy_exported_path_count": 3,
+      "legacy_exported_path_edge_ids": [
+        [
+          "18237",
+          "20186"
+        ],
+        [
+          "18237",
+          "20187"
+        ],
+        [
+          "18237",
+          "20188"
+        ]
+      ],
+      "legacy_branch_gate_s": 8.090188039074278,
+      "approx_first_retained_forward_topology_branch_distance_m": 6.0901880390742775,
+      "branch_distance_contract": "Legacy extractor sums centerline edge lengths after ego projection; branch_gate_s = total + 2 at first retained multiple-successor edge. Subtract 2 only for this extractor. Red successors, repeated edges and export caps/filtering can omit paths. This is not distance to an INTERSECTION polygon.",
+      "road_context_query_radius_m": 200.0,
+      "road_object_layers_in_query": {
+        "ROADBLOCK": 78,
+        "INTERSECTION": 25,
+        "CARPARK_AREA": 86
+      },
+      "lane_count": null,
+      "lateral_lane_neighbors": null,
+      "legal_lane_change": null,
+      "reversible_or_variable_direction_lane": null,
+      "permission_evidence_status": "unknown: no lane boundaries, lateral neighbor identities, crossing markings, direction-control schedules or legal lane-change permissions in audited export",
+      "review_flags": [],
+      "longer_current_map_evidence": null
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+DiffusionDrive 外部方向意图融合框架 v1
+当前准备状态：原生Sigmoid与Softmax对照、统一评分拒绝及alpha–rho交互敏感性表；112条人工请求标签保持空白，参数尚未联合标定。使用标注页面先填写独立判断，再按“标定说明.txt”的固定流程选参。
+2026-10-07 / 开发原型：原生Sigmoid、Softmax对照、统一拒绝选项、同时间恒速障碍预测
+
+一、当前已经搭建的内容
+固定原模型生成的20条候选及各自的分类分数，不重新训练、不修改候选几何。
+在候选全部精修完成后，结合环境检查、外部方向意图和模型偏好，输出一个原候选ID及其原始轨迹。
+index.html为可直接打开的交互页面，16个历史开发场景均可选择。
+fusion.py是与模型和地图解耦的核心评分器；safety.py是可替换的当前环境检查适配器。
+runtime_adapter.py演示如何把模型的20x8x3输出和20个logit接入同一评分器。
+results保存具体演示结果和固定方向集合的开发回放；这不是独立测试集结果。
+现阶段没有新模型推理、在线ROS集成、车辆执行或闭环安全验证。
+
+二、一次运行的输入
+1. 同一帧的20条候选：ID、未来0.5/1.0/.../4.0秒的8个(x,y,yaw)点、原模型logit。
+2. 外部指令：active开关、angle_deg。车头前方为0度，左正右负。
+   active=true且angle_deg=0代表直行意图；松开摇杆应映射active=false，不能混成0度。
+   本版没有外部速度目标。平均速度只展示候选特征，不参与融合评分。
+3. 每个候选对应的环境检查结果：eligible与reasons。未知不能当通过。
+
+三、单个候选如何比较外部指令
+用当前自车后轴原点(0,0)到第4秒位置的连线角度：
+theta_i = atan2(y_i(4), x_i(4))，单位为度。
+不使用第一个未来点作起点，不使用第4秒车头yaw或最后一小段切线。
+终点净位移小于1米时，方向记为未定义；它不能参与方向匹配，但可以作为无指令/回退候选接受环境检查。
+最短圆周误差：e_i = abs(wrap(theta_i - u))，wrap映射到[-180,180)。
+外部意图分：h_i = exp(-0.5 * (e_i / sigma)^2)。误差0时为1，误差增大时平滑降低。
+
+四、原模型评分与融合
+原始logit可为负数，不是安全概率，不能直接与度数加权。
+默认 normalization=sigmoid：m_i = 1/(1+exp(-z_i))，使用数值稳定实现，固定原生T=1，页面模型温度不参与它。
+对照 normalization=softmax：在固定全20候选上计算 m_i = exp(z_i/T) / sum_j exp(z_j/T)，使用减最大值防溢出。
+Sigmoid逐候选映射，不要求总和为1；Softmax表达全20池内相对偏好。两者均未做概率校准，也不是安全或合理性概率。
+融合分：F_i = (1-alpha)*m_i + alpha*h_i。
+页面和核心均显示0到1的分数，保留原始logit供对照。
+alpha是效用权重，不代表人获得百分之多少控制权。
+归一化先于安全与方向筛选，不能每更换候选子集就重新归一化。
+
+五、可选范围、接受和回退
+G = 通过指定环境检查的候选集合。
+默认 decision_rule=score_reject：从G内方向已定义的候选中提议最高融合分F_i，同分取较小原始ID。
+拒绝选项的基准分为rho。最高F_i严格大于rho才接受，等于或低于rho均拒绝；此规则不使用固定10度方向门槛。
+输出proposed_id/proposed_score表示融合提议，selected_id表示实际选择。拒绝后即使仍有selected_id，也不得计为意图接受。
+没有外部指令：在G中选择原模型logit最高者。
+有外部指令但联合支持不足、G非空：报告rejected_low_support，回退到G中的模型首选。
+G为空：返回selected_trajectory=null、stop_requested=true，交给停车/应急控制器；返回标志不等于车已停下。
+“当前候选不支持”不证明道路没有这种走法，也不证明人的意图不合理。
+这里的“接受”仅表示统一分数超过演示基准，不代表完成指定通道、实际到达或人确认满意。
+历史 decision_rule=direction_tolerance：先取G内方向误差<=epsilon的集合，再最大化融合分；集合空则rejected_unsupported并回退。
+同时选择direction_tolerance和softmax可复现上一版规则，仅作历史对照。
+
+六、开发默认参数与实验边界
+alpha=0.7，rho=0.75，sigma=15度，终点最小净位移=1米。rho仅为演示值，不是根据112条请求拟合得出。
+T=2仅适用于Softmax对照；epsilon=10度仅适用于历史方向容差规则。当前Sigmoid默认不使用T，统一拒绝默认不使用epsilon。
+环境检查车身外扩0.1米，yaw插值最大2度、时间步最大0.1秒。
+新预测模式还按“自车段位移+最大动态对象速度×该段时长”的相对平移上界以0.2米细分；冻结对照保留旧的自车空间细分。
+以上都是可审查的开发默认值，没有参数标定、最优性结论或独立测试验证。
+sigma决定方向相似度下降速度，rho决定接受基准；参数作用不同，需用独立标签比较。
+score_reject下alpha=0仍有拒绝选项，因而不等于无指令的原模型baseline。页面另列G内模型自主选择。
+纯方向对照等价alpha=1：只以I_i选择提议，再以同一rho决定接受/回退；不借用加权融合的通过池。
+加权融合允许方向一致性与模型偏好互相补偿，不保证角误差最小。联合分数过线也不等于独立任务完成。
+
+七、三种环境检查模式必须分清
+默认 current_environment_prediction：使用当前HD地图、定位、当前参与者标注框及已知当前绝对速度作为感知代理。
+静态类别对象保持原位置；车辆、行人、自行车等动态类别按当前速度恒速平移，框航向保持当前值。
+在同一未来时刻t比较自车轮廓E_i(t)与障碍预测轮廓B_j(t)，其中中心p_j(t)=p_j(0)+v_j(0)*t。
+速度是在当前固定自车坐标系内表达的物体绝对速度，不是相对接近速度，也不随未来自车姿态重置坐标。
+动态对象当前速度为零时，恒速模型下保持原位置；速度未知或无效时返回unknown，不静默当成静态空闲区域。
+沿完整原始预测轨迹加密采样，检查扩张后的完整车身是否留在可行驶区域，是否与同一时刻障碍框相交。
+恒速/固定航向只是开发假设，未建模未来制动、转弯、预测置信区间或交互反应，未验证车辆跟踪与动力学。
+这不是ROS栅格costmap、原官方DAC/TTC算法或未来安全证书；当前0.1米余量也不是已标定的不确定性界限。
+地图/感知缺失、身份或时间不匹配、超地图已知范围：返回unknown且不进入G。
+
+对照 current_environment_geometry：全部当前参与者都固定在当前位置，明确作为冻结障碍对照保留。
+运动前车被固定4秒会造成S13/S14整池拒绝；此模式不再是默认动态检查，也不能代表真实未来无可行轨迹。
+可用guard_config={'actor_motion_mode':'frozen'}调用同一适配器复现该对照；默认值为constant_velocity。
+
+诊断模式 offline_pdm：使用历史保存的NC=DAC=TTC=1作事后回放门槛。
+这些指标涉及离线仿真与记录的未来交通参与者信息，不能接入在线控制决策。
+它仅用于与之前页面/实验对照；它与恒速预测或冻结几何检查的差异不等于某一方法的错误率。
+初速衔接偏差和舒适度没有重新加入硬门槛。
+安全模块未使用模型分数或外部方向；核心评分器未读取未来真值或离线指标。
+
+八、历史冻结＋方向容差＋Softmax对照的例子（以下旧S08/S04数字均不是新版默认统一拒绝规则）
+S08，指令直行0度，默认评分参数和冻结当前障碍模式：
+环境检查13/20通过，方向容差内2条（ID10、19）；融合选择ID19。
+ID19方向-1.372627度，模型归一化0.00590251，意图分0.99582185，融合分0.69884605。
+同环境检查下模型首选ID0，方向+23.915991度。
+
+S08，指令左14.3度：默认融合选择ID0，误差9.615991度，仍在开发容差10度内。
+同模式纯方向选择ID2（+15.847365度），更接近指令；这展示模型偏好与指令精度之间的权衡。
+不能根据此例宣称加权融合比纯方向更准确；需要结合独立任务成功、稳定性和安全评估。
+
+S08，指令右30度：当前检查通过的候选中没有符合容差的轨迹，拒绝指令，回退ID0；不可算作服从指令。
+S04，指令右20度：历史offline_pdm模式选ID10；新current_environment_geometry模式ID10和19未通过完整车身检查，回退ID2。
+新结果与之前S04离线机制对照采用不同检查协议，原页面和原结果都保持不变。
+S13/S14在冻结当前障碍对照中仍无候选通过，不能直接解释为真实环境没有安全运动。
+当前预测环境检查：S13通过16/20，S14通过8/20；直行0度、新版默认Sigmoid统一拒绝下仍分别接受ID18、ID6。
+实际结果见results/S13_forward.json、results/S14_forward.json及交互页面；16场和全部320条原始轨迹均保留。
+全库恒速预测通过224/320，冻结对照195/320，离线三项门槛262/320；这些协议不同，不能将通过数增加直接解释为安全性提高。
+图中道路和障碍底图显示当前时刻t=0；默认模式实际检查同一未来时刻的预测框，未来轨迹经过当前旧框位置不等于同时间碰撞。
+
+九、运行方式（在当前工作区执行）
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S08 --angle 0
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S08 --angle 9 --output intent-fusion-framework-v1/results/custom.json
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S08 --no-command
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S04 --angle -20 --safety-mode offline_pdm
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S13 --angle 0
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S13 --angle 0 --safety-mode current_environment_geometry
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S08 --angle 0 --normalization softmax --decision-rule score_reject --rejection-threshold 0.75
+python -X utf8 intent-fusion-framework-v1/fusion.py --scene S08 --angle 0 --normalization softmax --decision-rule direction_tolerance
+
+数据重建：python -X utf8 intent-fusion-framework-v1/build_framework.py
+页面重建：python -X utf8 intent-fusion-framework-v1/build_page.py
+标注页重建：python -X utf8 intent-fusion-framework-v1/build_annotation_page.py
+核心依赖只有Python标准库；当前环境适配器和重建需要Shapely（本机已安装）。
+
+十、后续工程顺序
+1. 按独立任务目标完成请求标注，按trip固定分组；联合标定alpha与rho后冻结，其它参数保持预先声明的设置。
+2. 在原模型argmax/gather前导出poses_reg（20x8x3）和poses_cls（20），接runtime_adapter。
+3. 用实际当前感知/地图/预测替换标注代理，统一坐标、时间戳、车体尺寸和已知区域。
+4. 保留原模型、纯方向、加权融合的同检查对照；真正anchor前融合另接精修前，不读取最终logit。
+5. 独立场景验证指定区域到达、轨迹跟踪、碰撞/越界、舒适度、连续帧切换与拒绝/误拒绝。
+
+不能仅靠最小角度误差或门槛定义的接受率证明融合有效，也不能把恒速预测通过称为未来安全保证。
+
+2026-10-07 补充：16场景已增加道路结构分类及浏览筛选，详情见“场景分类说明.txt”。
+类别不进入融合或环境检查；分类更新本身没有改变候选、参数和输出。
+2026-10-07 动态检查修正：默认环境检查改为同时间恒速预测；评分公式、原候选及场景分类保持原样，但资格集合与最终输出会随检查模式变化。
+S13_S14冻结障碍检查说明.txt以及work/s13_s14_*诊断是修正前问题定位的历史记录；当前版本以data.json、protocol.json和work/unified_rejection_validation.json为准。
+
+2026-10-07 统一拒绝与独立标注更新：
+本轮用户确认尚未标注。annotation.html提供112条请求的独立填写界面，只含当前道路和交通信息，不含模型候选或分数。
+填写后下载independent_intent_annotations.json；原始annotation_template.json保持空白。必须使用实际判断者、目标、理由和证据，不得将PDM、旧规则或脚本生成结果当人工标签。
+标定脚本calibration.py按trip隔离分组，对Sigmoid和Softmax分别探索alpha/rho；详见标定说明.txt。
+当前results/calibration_status.json明确not_calibrated、best_config=null。实际没有拟合或自动应用最佳参数。
+本轮固定sigma=15，Softmax的T=2；即使未来拟合alpha/rho，也不能称所有参数或真实安全已校准。
+最新数学/回归审计为work/unified_rejection_validation.json。work/dynamic_guard_audit.json和work/dynamic_guard_scoring_parity.json属于前一轮动态检查修改的历史证据。

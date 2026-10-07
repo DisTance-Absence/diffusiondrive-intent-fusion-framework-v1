@@ -1,0 +1,60 @@
+{
+  "version": "1.2-development-unified-rejection",
+  "date": "2026-10-07",
+  "stage": "late_fusion_after_all_20_refined_candidates",
+  "defaults": {
+    "alpha": 0.7,
+    "temperature": 2.0,
+    "sigma_deg": 15.0,
+    "tolerance_deg": 10.0,
+    "min_displacement_m": 1.0,
+    "normalization": "sigmoid",
+    "decision_rule": "score_reject",
+    "rejection_threshold": 0.75
+  },
+  "ranking": "Native sigmoid(raw logit), or softmax over all20; fused=(1-alpha)*model_weight+alpha*exp(-error^2/(2*sigma^2)); ties smaller original ID",
+  "acceptance": "Default score_reject: among environment-eligible candidates with defined direction, propose maximum fused score; accept only when score > rejection_threshold. Equality rejects. No hard direction tolerance.",
+  "historical_rule": "direction_tolerance + softmax reproduces previous angular-gate selection; not the default.",
+  "calibration": {
+    "status": "not_calibrated",
+    "independent_label_count": 0,
+    "reason": "No completed independent accept/reject annotations; the included 112-request template remains blank.",
+    "template": "annotation_template.json",
+    "annotation_page": "annotation.html",
+    "instructions": "标定说明.txt",
+    "report": "results/calibration_status.json",
+    "defaults_are_demonstration_only": true,
+    "sensitivity_scope": "Current scene and current command only; alpha-rho response is not success rate or parameter optimization."
+  },
+  "fallback": "unsupported intent: highest model logit among environment-eligible candidates; none: null trajectory and stop_requested",
+  "command_input": {
+    "active": "explicit boolean",
+    "angle_deg": "relative to current ego forward; left positive; 0 is forward, not stop"
+  },
+  "safety_modes": {
+    "current_environment_prediction": "Current HD map + static actors fixed + dynamic actors translated by current absolute velocity at each matching future time, with fixed heading. Sampled constant-velocity prediction, not official DAC/TTC or a validated dynamic safety guarantee. Unknown dynamic velocity fails closed.",
+    "current_environment_geometry": "Frozen-current-actor comparison only: current HD map + all current actor footprints fixed in space. This deliberately freezes moving actors too; not an appropriate general future collision model.",
+    "offline_pdm": "Existing NC/DAC/TTC used as a retrospective oracle-like gate for comparison; unavailable to an online controller."
+  },
+  "default_safety_mode": "current_environment_prediction",
+  "candidate_modification": false,
+  "motion_prediction": {
+    "model": "current absolute velocity, constant translation, fixed actor yaw",
+    "time_frame": "all future times expressed in the current fixed ego rear-axle frame",
+    "uncertainty": "no calibrated prediction uncertainty; fixed 0.1 m vehicle margin only",
+    "missing_dynamic_velocity": "unknown, not eligible",
+    "future_ground_truth_used": false
+  },
+  "new_inference_performed": false,
+  "online_integration_performed": false,
+  "closed_loop_execution_performed": false,
+  "parameter_calibration_performed": false,
+  "independent_test_performed": false,
+  "prior_s04_comparison_unchanged": true,
+  "next_validation": [
+    "tune on development scenes, freeze settings, use independent test scenes",
+    "integrate current perception/local costmap + predicted dynamic obstacles",
+    "compare same environment checks and fallback, report rejection and actual task success",
+    "real anchor-pre-fusion requires a separate pre-inference selector; final logits must not leak into it"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "scope": "Incremental numerical/snapshot/annotation audit only. No new model inference, geometry execution, vehicle control, or parameter selection.",
+  "numeric_sigmoid": {
+    "decimal_precision_digits": 100,
+    "cases": [
+      {
+        "raw_logit": -1000.0,
+        "core_native_sigmoid": 0.0,
+        "decimal_reference": "5.075958897549456765291809479574336919305599282892837361832393845410540542974819175679662169046542868E-435",
+        "reference_rounded_float": 0.0,
+        "absolute_error": 0.0,
+        "allowed_error": 1e-323,
+        "passed": true
+      },
+      {
+        "raw_logit": -746.0,
+        "core_native_sigmoid": 0.0,
+        "decimal_reference": "1.038284809515828239425009121279735987224237377008888965397951021957667506539592540327490363612531142E-324",
+        "reference_rounded_float": 0.0,
+        "absolute_error": 0.0,
+        "allowed_error": 1e-323,
+        "passed": true
+      },
+      {
+        "raw_logit": -745.0,
+        "core_native_sigmoid": 5e-324,
+        "decimal_reference": "2.822350730471937076353440082059782620824363062910177902634050635325160789293414745439001929267574511E-324",
+        "reference_rounded_float": 5e-324,
+        "absolute_error": 0.0,
+        "allowed_error": 1e-323,
+        "passed": true
+      },
+      {
+        "raw_logit": -740.0,
+        "core_native_sigmoid": 4.2e-322,
+        "decimal_reference": "4.188739880048048939457540001583652882413125237084260715282037825340098290557230064991827784863137496E-322",
+        "reference_rounded_float": 4.2e-322,
+        "absolute_error": 0.0,
+        "allowed_error": 1e-323,
+        "passed": true
+      },
+      {
+        "raw_logit": -100.0,
+        "core_native_sigmoid": 3.720075976020836e-44,
+        "decimal_reference": "3.720075976020835962959695803863118337358892153987129293446860811795144777987347177852365692894782969E-44",
+        "reference_rounded_float": 3.720075976020836e-44,
+        "absolute_error": 0.0,
+        "allowed_error": 1.4880303904083346e-58,
+        "passed": true
+      },
+      {
+        "raw_logit": -40.0,
+        "core_native_sigmoid": 4.248354255291589e-18,
+        "decimal_reference": "4.248354255291588977280720904404506371434762717886168074933018472534898102584418566380577993403872602E-18",
+        "reference_rounded_float": 4.248354255291589e-18,
+        "absolute_error": 0.0,
+        "allowed_error": 1.6993417021166356e-32,
+        "passed": true
+      },
+      {
+        "raw_logit": -20.0,
+        "core_native_sigmoid": 2.0611536181902033e-09,
+        "decimal_reference": "2.061153618190203581430862129474592690752490018869299652281599059550616586946743337524654884065137029E-9",
+        "reference_rounded_float": 2.0611536181902037e-09,
+        "absolute_error": 4.1359030627651384e-25,
+        "allowed_error": 8.244614472760816e-24,
+        "passed": true
+      },
+      {
+        "raw_logit": -3.0,
+        "core_native_sigmoid": 0.04742587317756679,
+        "decimal_reference": "0.04742587317756678087884815177175220138617943242060910071788800877444871150271023388578365449106003901",
+        "reference_rounded_float": 0.04742587317756678,
+        "absolute_error": 6.938893903907228e-18,
+        "allowed_error": 1.8970349271026715e-16,
+        "passed": true
+      },
+      {
+        "raw_logit": 0.0,
+        "core_native_sigmoid": 0.5,
+        "decimal_reference": "0.5",
+        "reference_rounded_float": 0.5,
+        "absolute_error": 0.0,
+        "allowed_error": 2e-15,
+        "passed": true
+      },
+      {
+        "raw_logit": 3.0,
+        "core_native_sigmoid": 0.9525741268224334,
+        "decimal_reference": "0.9525741268224332191211518482282477986138205675793908992821119912255512884972897661142163455089399606",
+        "reference_rounded_float": 0.9525741268224333,
+        "absolute_error": 1.1102230246251565e-16,
+        "allowed_error": 3.810296507289733e-15,
+        "passed": true
+      },
+      {
+        "raw_logit": 20.0,
+        "core_native_sigmoid": 0.9999999979388463,
+        "decimal_reference": "0.9999999979388463818097964185691378705254073092475099811307003477184009404493834130532566624753451158",
+        "reference_rounded_float": 0.9999999979388464,
+        "absolute_error": 1.1102230246251565e-16,
+        "allowed_error": 3.999999991755386e-15,
+        "passed": true
+      },
+      {
+        "raw_logit": 40.0,
+        "core_native_sigmoid": 1.0,
+        "decimal_reference": "0.9999999999999999957516457447084110227192790955954936285652372821138319250669815274651018974155814337",
+        "reference_rounded_float": 1.0,
+        "absolute_error": 0.0,
+        "allowed_error": 4e-15,
+        "passed": true
+      },
+      {
+        "raw_logit": 100.0,
+        "core_native_sigmoid": 1.0,
+        "decimal_reference": "0.9999999999999999999999999999999999999999999627992402397916403704030419613688166264110784601287070657",
+        "reference_rounded_float": 1.0,
+        "absolute_error": 0.0,
+        "allowed_error": 4e-15,
+        "passed": true
+      },
+      {
+        "raw_logit": 740.0,
+        "core_native_sigmoid": 1.0,
+        "decimal_reference": "1",
+        "reference_rounded_float": 1.0,
+        "absolute_error": 0.0,
+        "allowed_error": 4e-15,
+        "passed": true
+      },
+      {
+        "raw_logit": 1000.0,
+        "core_native_sigmoid": 1.0,
+        "decimal_reference": "1",
+        "reference_rounded_float": 1.0,
+        "absolute_error": 0.0,
+        "allowed_error": 4e-15,
+        "passed": true
+      }
+    ],
+    "finite_extremes": {
+      "-1e+308": 0.0,
+      "1e+308": 1.0
+    },
+    "note": "Uses relative/ULP-aware tolerances so tiny nonzero sigmoid tails are not accepted as zero."
+  },
+  "preserved_snapshot": {
+    "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\work\\pre_reject_option_data.json",
+    "sha256": "37ae1f2f9329fbe49fe4d8db8f2c280b21f8a072d87045813b918c93b831d691",
+    "scenes": 16,
+    "candidates_checked": 320,
+    "guard_assessments_checked": 960,
+    "equality_scope": "All candidate fields exactly equal, including poses/logits/anchors/offline metrics and all three guard diagnostics."
+  },
+  "independent_annotations": {
+    "template_sha256": "278a38e372f27993bdfd65815d759ad79bba8776c79caf2f5be338de7097311a",
+    "validation": {
+      "status": "valid",
+      "errors": [],
+      "records": 112,
+      "groups": 16,
+      "blank": 112,
+      "completed": {},
+      "binary_labels": 0,
+      "note": "人工来源只能通过标注者声明与留存证据核验；程序不能证明是谁填写或其判断正确。"
+    },
+    "current_status": "not_calibrated",
+    "best_config": null,
+    "status_report_sha256": "a651a72f7bc5bf6c288f556aa63ed213a384703571e68316211f98b9e0dea98f"
+  },
+  "reused_main_audit": {
+    "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\work\\unified_rejection_validation.json",
+    "sha256": "13cc65a10374bf78f1b638ef328f7bcdbaca11f8f3d2a62300436b830b2b84c1",
+    "status": "PASS",
+    "fixtures": 180,
+    "legacy_fixtures": 45,
+    "grid_rows": 672,
+    "random_cases": 300
+  },
+  "sensitivity_scope": "The alpha-rho grid is computed in the browser for the current scene/command; cell/count/click verification belongs to browser QA, not this report.",
+  "interpretation": "Acceptance rate describes an algorithm decision frequency. With zero independent labels it is not intent success, safety, balanced accuracy, or calibrated performance.",
+  "data_sha256": "4562eb1af4259e2798f2d820aed71ee4d9b97374005585d2455678495063bc81",
+  "fusion_sha256": "1d37f1d9f089ec72588fc5e04260bf92ab87bb9ed2f2a4c8f72278369adbe808",
+  "audit_sha256": "583c8b147a3beb9feeae9197e29a350c575d2f9f4d49f2ef97a2df883dd9be44"
+}

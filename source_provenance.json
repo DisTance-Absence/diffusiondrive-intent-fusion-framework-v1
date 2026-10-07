@@ -1,0 +1,70 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\scene-choice-inventory-v3\\inventory.json",
+      "sha256": "ce444d5bad0699990f3f903612aaaca2ccb2b591f70743cdc78494a6d54912b6"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\rule-joystick-routing-v10\\anchors.json",
+      "sha256": "a368791231aae7cfb79d6953561035f0887ec9bd7ed8dbb0004e7b4c7981adde"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\rule-joystick-routing-v10\\full20_reference.jsonl",
+      "sha256": "d63f384d5670580cac3d895264d24a1ced203028542ff2dbd7d72a13833cf7dc"
+    }
+  ],
+  "code": [
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\fusion.py",
+      "sha256": "1d37f1d9f089ec72588fc5e04260bf92ab87bb9ed2f2a4c8f72278369adbe808"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\safety.py",
+      "sha256": "37a28b2b79b0cf7e1f29ae6a917b35263f8a4bb5e11c3f191387c175e29c3e1b"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\build_framework.py",
+      "sha256": "db253e45b45473bf462d7a4a2f614510981200a45abbab63b01e6d36a162c187"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\runtime_adapter.py",
+      "sha256": "09c140fb5cd236559cf00c912761a0e8e52f82b34dbb349056b94152f34868d3"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\calibration.py",
+      "sha256": "6bc9eff71aa75e6e07c481dd6cf56497e95af807ebfd8f83070f495dd4522a63"
+    },
+    {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\build_annotation_page.py",
+      "sha256": "c2db86c79a580debae8e660091ef967b955e420c5449e42760b562f88ea59c74"
+    }
+  ],
+  "sources_unchanged": true,
+  "distinction": "Map/actors are dataset-provided current-information proxies, not perception estimates. Existing metrics only used by separately labelled offline_pdm adapter.",
+  "road_classification": {
+    "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\scene_classification.json",
+    "sha256": "d3f797991ef327b93f9c5d60fd7c244144a28d2ed098754e31f3efa767f9b403",
+    "metadata_only": true,
+    "date": "2026-10-07",
+    "sources": [
+      {
+        "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\scene-choice-inventory-v3\\inventory.json",
+        "sha256": "ce444d5bad0699990f3f903612aaaca2ccb2b591f70743cdc78494a6d54912b6"
+      },
+      {
+        "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\joystick-experiment-copy\\rule-joystick-contrast-v2\\results\\frozen\\screen_manifest_frozen.json",
+        "sha256": "6055bfdf808030c6c44a6740513c699e5704d08be14bdc1eb8f425e296fa90e7"
+      }
+    ],
+    "builder": {
+      "path": "C:\\Users\\Lansing\\Documents\\ChatGPT\\DiffusionDrive融合外部指令\\intent-fusion-framework-v1\\classify_scenes.py",
+      "sha256": "80adddc85c9dde1c5fd267e6796df18565a11acf552f4db1a8a94df8f71f4ece"
+    }
+  },
+  "independent_annotation": {
+    "template": "annotation_template.json",
+    "completed_labels": 0,
+    "parameter_calibration_performed": false,
+    "user_confirmed_no_labels": true
+  }
+}

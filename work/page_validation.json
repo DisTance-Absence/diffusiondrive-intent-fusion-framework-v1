@@ -1,0 +1,2428 @@
+{
+  "result": "PASS",
+  "defaultSafetyMode": "current_environment_prediction",
+  "defaultConfig": {
+    "alpha": 0.7,
+    "temperature": 2,
+    "sigma_deg": 15,
+    "tolerance_deg": 10,
+    "min_displacement_m": 1,
+    "normalization": "sigmoid",
+    "decision_rule": "score_reject",
+    "rejection_threshold": 0.75
+  },
+  "modeChoices": [
+    "current_environment_prediction",
+    "current_environment_geometry",
+    "offline_pdm"
+  ],
+  "fixtureAudit": {
+    "fixtures": 180,
+    "rowChecks": 3600,
+    "scalarChecks": 62764,
+    "legacyFixtures": 45,
+    "legacyRowChecks": 900,
+    "legacyScalarChecks": 14971,
+    "mismatches": []
+  },
+  "rejectionAudit": {
+    "toleranceIgnored": true,
+    "nativeTemperatureIgnored": true,
+    "strictEqualityRejects": true,
+    "strictAboveAccepts": true,
+    "noCommandBypassesThreshold": true,
+    "undefinedDirectionRejects": true,
+    "comparisonDisplayMatches": true,
+    "defaultProposed": 19,
+    "defaultOutput": 0,
+    "defaultStatus": "rejected_low_support"
+  },
+  "sensitivityAudit": {
+    "defaultRows": 11,
+    "defaultColumns": 12,
+    "defaultCells": 132,
+    "currentRhoExtraColumn": true,
+    "raisingRhoCannotRestoreAcceptance": true,
+    "normalizationSwitchRecomputesGrid": true,
+    "clickPreservesOtherState": true,
+    "clickedAlpha": 0.9,
+    "clickedRho": 0.6,
+    "offAxisAlphaVisible": true,
+    "disabledWithoutCommand": true,
+    "disabledForLegacyRule": true
+  },
+  "classificationAudit": {
+    "counts": {
+      "crossing_junction": 7,
+      "roundabout": 2,
+      "branch_junction": 4,
+      "curved_segment": 1,
+      "straight_approach": 2
+    },
+    "allScenes": 16,
+    "allCandidates": 320,
+    "categories": [
+      {
+        "id": "crossing_junction",
+        "label": "交叉路口",
+        "count": 7
+      },
+      {
+        "id": "branch_junction",
+        "label": "丁字/分岔路口",
+        "count": 4
+      },
+      {
+        "id": "roundabout",
+        "label": "环岛式道路",
+        "count": 2
+      },
+      {
+        "id": "curved_segment",
+        "label": "一般弯道路段",
+        "count": 1
+      },
+      {
+        "id": "straight_approach",
+        "label": "宽幅直路/路口接近段",
+        "count": 2
+      }
+    ],
+    "classificationDoesNotAffectFusion": true,
+    "allProvisional": true,
+    "allLaneChangeUnverified": true,
+    "allVariableDirectionUnverified": true
+  },
+  "classificationCategoryCases": [
+    {
+      "id": "crossing_junction",
+      "count": 7
+    },
+    {
+      "id": "branch_junction",
+      "count": 4
+    },
+    {
+      "id": "roundabout",
+      "count": 2
+    },
+    {
+      "id": "curved_segment",
+      "count": 1
+    },
+    {
+      "id": "straight_approach",
+      "count": 2
+    }
+  ],
+  "classificationJump": "passed; cross-category restores all and preserves controls",
+  "renderCases": 192,
+  "modeCases": [
+    {
+      "scene": "S01",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 18,
+      "status": "rejected_low_support",
+      "proposed_id": 17,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 8,
+      "selected_id": 8,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 0,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 19,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "rejected_low_support",
+      "proposed_id": 4,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 5,
+      "status": "rejected_low_support",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 8,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "rejected_low_support",
+      "proposed_id": 17,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 11,
+      "status": "accepted",
+      "proposed_id": 8,
+      "selected_id": 8,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 0,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 19,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 9,
+      "status": "rejected_low_support",
+      "proposed_id": 7,
+      "selected_id": 8,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 5,
+      "status": "rejected_low_support",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "rejected_low_support",
+      "proposed_id": 17,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 8,
+      "selected_id": 8,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 18,
+      "status": "accepted",
+      "proposed_id": 0,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "rejected_low_support",
+      "proposed_id": 19,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 18,
+      "status": "rejected_low_support",
+      "proposed_id": 7,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 7,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 1,
+      "selected_id": 1,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 18,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 4,
+      "selected_id": 4,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 5,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 8,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_prediction",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 11,
+      "status": "accepted",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 9,
+      "status": "accepted",
+      "proposed_id": 7,
+      "selected_id": 7,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 5,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_geometry",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 3,
+      "selected_id": 3,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 18,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 18,
+      "status": "accepted",
+      "proposed_id": 7,
+      "selected_id": 7,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 7,
+      "status": "accepted",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 1,
+      "selected_id": 1,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "offline_pdm",
+      "normalization": "sigmoid",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 18,
+      "status": "rejected_low_support",
+      "proposed_id": 17,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 8,
+      "selected_id": 8,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "rejected_low_support",
+      "proposed_id": 0,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 19,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "rejected_low_support",
+      "proposed_id": 4,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 5,
+      "status": "rejected_low_support",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 8,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "rejected_low_support",
+      "proposed_id": 17,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 11,
+      "status": "accepted",
+      "proposed_id": 8,
+      "selected_id": 8,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "rejected_low_support",
+      "proposed_id": 0,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 19,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 9,
+      "status": "rejected_low_support",
+      "proposed_id": 7,
+      "selected_id": 8,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 5,
+      "status": "rejected_low_support",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 13,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "rejected_low_support",
+      "proposed_id": 17,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 8,
+      "selected_id": 8,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 18,
+      "status": "rejected_low_support",
+      "proposed_id": 0,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 16,
+      "status": "rejected_low_support",
+      "proposed_id": 19,
+      "selected_id": 0,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 18,
+      "status": "rejected_low_support",
+      "proposed_id": 7,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 7,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 1,
+      "selected_id": 1,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 12,
+      "status": "rejected_low_support",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "score_reject",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 18,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 4,
+      "selected_id": 4,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 5,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 8,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_prediction",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 11,
+      "status": "accepted",
+      "proposed_id": 9,
+      "selected_id": 9,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 17,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 9,
+      "status": "accepted",
+      "proposed_id": 7,
+      "selected_id": 7,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 5,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 9,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 0,
+      "status": "no_feasible_candidate",
+      "proposed_id": null,
+      "selected_id": null,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 13,
+      "status": "rejected_unsupported",
+      "proposed_id": null,
+      "selected_id": 13,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "current_environment_geometry",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S01",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 17
+    },
+    {
+      "scene": "S02",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 17,
+      "selected_id": 17,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S03",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S04",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    },
+    {
+      "scene": "S05",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S06",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 3,
+      "selected_id": 3,
+      "original_model_top1": 8
+    },
+    {
+      "scene": "S07",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 18,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S08",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 16,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 0
+    },
+    {
+      "scene": "S09",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 14,
+      "selected_id": 14,
+      "original_model_top1": 14
+    },
+    {
+      "scene": "S10",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 18,
+      "status": "accepted",
+      "proposed_id": 7,
+      "selected_id": 7,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S11",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 7,
+      "status": "accepted",
+      "proposed_id": 13,
+      "selected_id": 13,
+      "original_model_top1": 9
+    },
+    {
+      "scene": "S12",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 15,
+      "status": "accepted",
+      "proposed_id": 1,
+      "selected_id": 1,
+      "original_model_top1": 1
+    },
+    {
+      "scene": "S13",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 19,
+      "status": "accepted",
+      "proposed_id": 18,
+      "selected_id": 18,
+      "original_model_top1": 18
+    },
+    {
+      "scene": "S14",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 14,
+      "status": "accepted",
+      "proposed_id": 6,
+      "selected_id": 6,
+      "original_model_top1": 6
+    },
+    {
+      "scene": "S15",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 12,
+      "status": "accepted",
+      "proposed_id": 19,
+      "selected_id": 19,
+      "original_model_top1": 13
+    },
+    {
+      "scene": "S16",
+      "mode": "offline_pdm",
+      "normalization": "softmax",
+      "decision_rule": "direction_tolerance",
+      "eligible": 20,
+      "status": "accepted",
+      "proposed_id": 2,
+      "selected_id": 2,
+      "original_model_top1": 2
+    }
+  ],
+  "predictionPassTotal": 224,
+  "geometryPassTotal": 195,
+  "offlinePassTotal": 262,
+  "modeScoreInvariance": true,
+  "predictionDiagnostic": {
+    "scene": "S02",
+    "id": 4,
+    "time_s": 2.3125,
+    "actor_annotation_index": 15,
+    "display": "passed; same-time center and current/applied velocity"
+  },
+  "frozenDiagnostic": "passed; current velocity shown, applied velocity zero",
+  "currentS04": {
+    "id": 2,
+    "status": "rejected_low_support",
+    "excluded10and19": true
+  },
+  "offlineS04": {
+    "id": 2,
+    "status": "rejected_low_support",
+    "note": "事后评价回放，不能用于在线选择。"
+  },
+  "noCommand": {
+    "status": "no_command",
+    "allNoIntent": true,
+    "angleDisabled": true
+  },
+  "parameterControls": {
+    "alpha": 0.25,
+    "temperature": 3,
+    "sigma_deg": 25,
+    "tolerance_deg": 5,
+    "min_displacement_m": 1,
+    "normalization": "softmax",
+    "decision_rule": "score_reject",
+    "rejection_threshold": 0.62
+  },
+  "candidateSelection": "passed",
+  "eightFuturePoints": true,
+  "formulaPanel": "passed",
+  "downloadLinks": [
+    {
+      "path": "框架说明.txt",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "fusion.py",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "data.json",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S08_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/overview.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "场景分类说明.txt",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "scene_classification.json",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S01_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S02_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S03_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S04_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S05_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S06_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S07_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S09_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S10_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S11_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S12_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S13_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S14_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S15_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "figures/classification/S16_context.png",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "annotation.html",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "annotation_template.json",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "标定说明.txt",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "results/calibration_status.json",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "safety.py",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "runtime_adapter.py",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "protocol.json",
+      "exists": true,
+      "pending": false
+    },
+    {
+      "path": "app.js",
+      "exists": true,
+      "pending": false
+    }
+  ],
+  "javascriptErrors": [],
+  "mobilePageOverflow": false
+}

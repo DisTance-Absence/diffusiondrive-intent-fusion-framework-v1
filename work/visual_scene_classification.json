@@ -1,0 +1,396 @@
+{
+  "version": "independent_visual_structure_review_v1",
+  "review_date": "2026-10-07",
+  "reviewer_type": "assistant_visual_review",
+  "human_verified": false,
+  "scope": "当前自车附近道路结构及前方接近段；这是结构分类，不是候选动作分类或通行许可判断。",
+  "primary_source": "scene-choice-inventory-v3/inventory.json: scenes[].road_context.drivable_polygons_ego",
+  "method": [
+    "逐张查看S01–S16原有近景地图，再从原始道路多边形独立重绘无候选、无地图方向彩线的统一宽视野图。",
+    "常规宽视野为左右各60米、后方20米至前方90米；S05/S06/S14/S15另查看左右各100米、后方90米至前方110米。",
+    "结构结论依据可行驶域的道路臂、连通开口、弯曲边界与中央岛形状，不依据候选数量、候选颜色、方向类别或模型得分。",
+    "当前障碍框只作环境背景；多列车辆不能单独证明车道线、通行方向或变道合法性。"
+  ],
+  "common_limits": [
+    "未查看与这16个时刻逐一对应的原始相机画面；现有可行驶域图没有车道标线语义，不能认证车道数、同向相邻车道或允许变道。",
+    "支路数量是局部可见结构，不能由导出多边形端部推断实际道路尽头，也不能认证每条支路可进入。",
+    "环岛式描述仅指中央岛和环形道路的几何外观；没有认证正式环岛交通规则、优先权或各出口通行许可。",
+    "宽幅直路可能同时是远处路口的进口段；道路结构与变道动作应分开标注。",
+    "所有记录为助手视觉初审，不冒充用户人工复核。"
+  ],
+  "groups": [
+    {
+      "label": "交叉路口",
+      "scene_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S08",
+        "S10",
+        "S16"
+      ],
+      "count": 7
+    },
+    {
+      "label": "丁字/分岔路口",
+      "scene_ids": [
+        "S06",
+        "S07",
+        "S09",
+        "S11"
+      ],
+      "count": 4
+    },
+    {
+      "label": "环岛式道路",
+      "scene_ids": [
+        "S05",
+        "S15"
+      ],
+      "count": 2
+    },
+    {
+      "label": "一般弯道路段",
+      "scene_ids": [
+        "S12"
+      ],
+      "count": 1
+    },
+    {
+      "label": "宽幅直路/路口接近段",
+      "scene_ids": [
+        "S13",
+        "S14"
+      ],
+      "count": 2
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "token": "005552b5d8f9576e",
+      "primary_structure": "交叉路口",
+      "subtype": "近十字形四臂路口",
+      "secondary_features": [
+        "前方约20–30米的交叉区域",
+        "纵向道路贯通",
+        "左右两侧均有道路开口"
+      ],
+      "evidence": "宽视野道路域显示当前进口、前方出口和两条横向道路臂，四个圆角路缘围成近十字形交叉区。",
+      "uncertainties": [
+        "部分支路在导出几何中以平直端部结束，不能据此判断真实断头路。",
+        "未确认车道数、信号或每个转向是否合法。"
+      ],
+      "view_sufficiency": "局部四臂结构清楚；远端支路延伸证据有限。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S01_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_01_04.png"
+    },
+    {
+      "scene_id": "S02",
+      "token": "0488534d5cbd53d7",
+      "primary_structure": "交叉路口",
+      "subtype": "不规则四臂/斜交路口",
+      "secondary_features": [
+        "当前纵向进口",
+        "横向道路贯通",
+        "对面道路臂向左前方倾斜"
+      ],
+      "evidence": "近景及宽视野均能看到左右道路开口、当前进口和左前方斜向道路臂，整体不是规则正交十字。",
+      "uncertainties": [
+        "斜向和左侧道路臂的导出范围有限，不能认证远端路网连接。",
+        "几何四臂不等于四个合法行驶选择。"
+      ],
+      "view_sufficiency": "四臂与斜置特征足够清楚；支路用途及后续连接未核验。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S02_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_01_04.png"
+    },
+    {
+      "scene_id": "S03",
+      "token": "1c609dff4562547b",
+      "primary_structure": "交叉路口",
+      "subtype": "斜交四臂路口",
+      "secondary_features": [
+        "纵向道路贯通",
+        "横向道路斜穿",
+        "左右道路口位置不完全对齐"
+      ],
+      "evidence": "前方约15–35米的道路域中，一条斜向道路与当前纵向道路相交；四条道路臂在共同开放区域连接。",
+      "uncertainties": [
+        "开口错位和斜交不宜仅凭该图进一步定为两个独立丁字路口。",
+        "未认证车道连接和转弯许可。"
+      ],
+      "view_sufficiency": "足够判为斜交四臂结构。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S03_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_01_04.png"
+    },
+    {
+      "scene_id": "S04",
+      "token": "1c85e587511e58c7",
+      "primary_structure": "交叉路口",
+      "subtype": "近正交四臂路口",
+      "secondary_features": [
+        "前方约10–20米有横向道路",
+        "纵向道路继续延伸",
+        "周边有局部侧向开口"
+      ],
+      "evidence": "宽视野显示当前纵向道路与左右贯通的横向道路形成清楚十字；更远的局部口袋形开口不改变近端主交叉结构。",
+      "uncertainties": [
+        "较小的侧向开口可能是出入口或其他可行驶空间，未进一步认作独立道路臂。",
+        "道路宽度不等于车道数。"
+      ],
+      "view_sufficiency": "足够判为近端四臂交叉路口。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S04_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_01_04.png"
+    },
+    {
+      "scene_id": "S05",
+      "token": "0dcf9b1ae12659d8",
+      "primary_structure": "环岛式道路",
+      "subtype": "环形道路出口/分流连接段",
+      "secondary_features": [
+        "中央圆形非道路岛",
+        "环形可行驶带",
+        "前方连接斜向分隔道路",
+        "局部分隔岛/导流形状"
+      ],
+      "evidence": "扩展视野揭示自车左侧完整中央圆岛和环形可行驶带；当前车位在环路右侧靠近连接处，前方同时延续环形弯曲并接出斜向道路。",
+      "uncertainties": [
+        "近景只看到分支，容易误标一般岔路；需保留环形道路背景。",
+        "未认证为法律定义的环岛，出口方向及通行许可仍待核验。"
+      ],
+      "view_sufficiency": "扩展视野足以确认环形几何及连接位置；原近景单独不足。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S05_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_extended.png"
+    },
+    {
+      "scene_id": "S06",
+      "token": "300253aba87250d6",
+      "primary_structure": "丁字/分岔路口",
+      "subtype": "渠化斜丁字接入",
+      "secondary_features": [
+        "当前纵向道路接入斜向道路",
+        "斜向道路有长条分隔区域",
+        "交汇区不规则"
+      ],
+      "evidence": "扩展道路图显示当前纵向进口在前方汇入横贯左下—右上的斜向道路；对面是斜向道路及分隔区域，未见同轴贯通的第四道路臂。",
+      "uncertainties": [
+        "较复杂的分隔和连接空间不能仅按自动地图参考线数量计为多个独立道路臂。",
+        "精确渠化车道连接需要车道级地图或原图。"
+      ],
+      "view_sufficiency": "足够归入丁字/分岔类；斜丁字为几何细类。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S06_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_extended.png"
+    },
+    {
+      "scene_id": "S07",
+      "token": "4326e315f8905575",
+      "primary_structure": "丁字/分岔路口",
+      "subtype": "左侧支路接入的渠化丁字路口",
+      "secondary_features": [
+        "主道路略向左弯",
+        "左侧道路口",
+        "交汇处可见三角形分隔岛"
+      ],
+      "evidence": "宽视野中当前道路连续向前，左侧一条道路接入；左前方三角形非道路区把连接空间分开，未见对向右侧贯通道路臂。",
+      "uncertainties": [
+        "自车右侧局部道路域外扩不等于第四条道路。",
+        "三角岛两侧的实际通行方向未核验。"
+      ],
+      "view_sufficiency": "近端三臂和三角岛清楚。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S07_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_05_08.png"
+    },
+    {
+      "scene_id": "S08",
+      "token": "6f9fd29cb1f45cf4",
+      "primary_structure": "交叉路口",
+      "subtype": "分隔道路上的斜交四臂路口",
+      "secondary_features": [
+        "当前道路中有长条中央分隔区",
+        "左右支路均存在",
+        "左右开口有角度和位置差异"
+      ],
+      "evidence": "原近景右侧裁切较紧；中性宽视野明确显示右侧还有横向道路，与左侧道路、当前进口和前方出口构成四臂结构。",
+      "uncertainties": [
+        "只用原近景会误判左侧丁字路口。",
+        "中央分隔开口不自动说明允许掉头或所有转向。"
+      ],
+      "view_sufficiency": "宽视野足够确认四臂；原近景不足。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S08_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_05_08.png"
+    },
+    {
+      "scene_id": "S09",
+      "token": "5cf48446b8345631",
+      "primary_structure": "丁字/分岔路口",
+      "subtype": "右侧分隔支路接入的丁字路口",
+      "secondary_features": [
+        "当前主道路近直",
+        "右侧支路有长条分隔岛",
+        "更远处另有道路连接"
+      ],
+      "evidence": "近端约10–20米处只见右侧支路接入，当前道路向前后延伸；右支路入口中的狭长岛分开两侧可行驶空间。",
+      "uncertainties": [
+        "更远前方约80米附近的其他连接不并入当前近端路口计数。",
+        "分隔支路两侧的方向和合法动作未核验。"
+      ],
+      "view_sufficiency": "足够判定近端三臂结构。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S09_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_09_12.png"
+    },
+    {
+      "scene_id": "S10",
+      "token": "9ed6528360cb519e",
+      "primary_structure": "交叉路口",
+      "subtype": "宽幅分隔道路的大型四臂路口",
+      "secondary_features": [
+        "道路交汇范围较大",
+        "纵横道路有中央分隔区域",
+        "多列车辆分布"
+      ],
+      "evidence": "宽视野能看到当前道路左侧的对向/分隔空间及向左延伸的道路臂，配合前方和右侧道路构成大型十字交叉，而非原近景呈现的单侧分支。",
+      "uncertainties": [
+        "原图左侧裁切严重，不能只据近景判丁字。",
+        "宽幅和多列车辆支持多车道可能性，确切车道数与变道规则未核验。"
+      ],
+      "view_sufficiency": "宽视野足够确认四臂及分隔结构；原近景不足。",
+      "lane_change_status": "有多车道可能性，未认证可变道",
+      "source_map": "scene-choice-inventory-v3/figures/S10_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_09_12.png"
+    },
+    {
+      "scene_id": "S11",
+      "token": "81eeb93f09045e8c",
+      "primary_structure": "丁字/分岔路口",
+      "subtype": "接入弯曲横向道路的丁字路口",
+      "secondary_features": [
+        "当前进口前端结束于交汇处",
+        "左侧道路较直",
+        "右侧道路随后向前弯曲"
+      ],
+      "evidence": "自车正前方道路域边界形成T形顶端，左、右两支路展开；右支路在远处弯向前方，因此不能把其远端朝前当作独立直行道路臂。",
+      "uncertainties": [
+        "右侧弯曲道路不构成第四个出口。",
+        "局部几何不能替代转向许可或路线定义。"
+      ],
+      "view_sufficiency": "三臂与右侧弯曲连接清楚。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S11_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_09_12.png"
+    },
+    {
+      "scene_id": "S12",
+      "token": "08fac6ec47cc5d82",
+      "primary_structure": "一般弯道路段",
+      "subtype": "轻缓弯曲的连续道路段",
+      "secondary_features": [
+        "近端近直、前方轻缓偏转",
+        "当前车后方邻近横向道路",
+        "较远前方有侧向开口"
+      ],
+      "evidence": "自车前方约0–50米两侧道路边界连续并缓慢弯曲，当前近端未见分成多条道路臂；宽视野显示身后和更远前方的连接，因此这里不是整幅路网均无路口。",
+      "uncertainties": [
+        "一般弯道是当前前方路段标签，不排除后方或更远位置的路口。",
+        "道路较窄但没有标线信息，不能据此精确判定单车道。"
+      ],
+      "view_sufficiency": "近端缓弯清楚；原图横向狭窄，宽视野用于排除遗漏近端支路。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S12_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_09_12.png"
+    },
+    {
+      "scene_id": "S13",
+      "token": "24ea06dc271f5b9a",
+      "primary_structure": "宽幅直路/路口接近段",
+      "subtype": "大型路口前的宽幅平直进口段",
+      "secondary_features": [
+        "近端道路近直且较宽",
+        "中央分隔区域",
+        "车辆横向呈多列分布",
+        "前方约45米以后道路明显展开并交叉"
+      ],
+      "evidence": "原近景主要呈现宽直路；宽视野显示更远前方左右贯通的大路口和中央岛端部，当前自车仍位于进口段。",
+      "uncertainties": [
+        "不能因当前4秒候选较直就把整个场景标成无路口。",
+        "图中未提供车道边界、同向车道邻接与标线类型，多车道变道潜力需要另核验。"
+      ],
+      "view_sufficiency": "足够区分近端宽直路与前方大型路口；不足以认证变道。",
+      "lane_change_status": "潜在多车道研究场景，未认证可变道",
+      "source_map": "scene-choice-inventory-v3/figures/S13_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_13_16.png"
+    },
+    {
+      "scene_id": "S14",
+      "token": "2ff93800f84c525a",
+      "primary_structure": "宽幅直路/路口接近段",
+      "subtype": "带中央分隔的宽幅直路接近渠化连接处",
+      "secondary_features": [
+        "近端宽直道路",
+        "长条中央分隔岛",
+        "多列车辆分布",
+        "前方约40–70米有右侧道路连接和三角岛"
+      ],
+      "evidence": "扩展图显示自车近端沿宽幅道路向前，前方右侧道路通过带三角岛的连接区接入；当前位置与该连接处尚有一段距离。",
+      "uncertainties": [
+        "近景看不清前方右侧连接，不能据近图宣称纯直路。",
+        "无法仅凭车辆并列位置确认同向车道数、可跨越边界或合法变道。"
+      ],
+      "view_sufficiency": "宽幅直路及前方渠化连接可确认；变道条件未知。",
+      "lane_change_status": "潜在多车道研究场景，未认证可变道",
+      "source_map": "scene-choice-inventory-v3/figures/S14_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_extended.png"
+    },
+    {
+      "scene_id": "S15",
+      "token": "388821a53a675b17",
+      "primary_structure": "环岛式道路",
+      "subtype": "环形道路内的弯曲路段",
+      "secondary_features": [
+        "完整中央圆岛",
+        "连续环形可行驶带",
+        "前方环路向左弯曲",
+        "局部导流/出入口形状"
+      ],
+      "evidence": "扩展图中圆形中央非道路区被可行驶环带包围，自车位于环带右侧，前方道路顺环形边界向左弯；这比单纯一般左弯标签更准确。",
+      "uncertainties": [
+        "现有图不能确认正式环岛规则或环路行驶方向。",
+        "自车右侧局部开口不能直接认证为可选出口或合法转向。"
+      ],
+      "view_sufficiency": "扩展视野足够确认环形结构及当前环内位置；近景不足以显出完整中央岛。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S15_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_extended.png"
+    },
+    {
+      "scene_id": "S16",
+      "token": "46518a9f25a35705",
+      "primary_structure": "交叉路口",
+      "subtype": "斜交四臂路口",
+      "secondary_features": [
+        "当前纵向道路贯通",
+        "横向道路斜穿",
+        "左右道路口在纵向略有错位"
+      ],
+      "evidence": "宽视野显示纵向道路与左低右高的斜向道路在前方共同交汇，四条道路臂连续可见。",
+      "uncertainties": [
+        "错位路缘不单独构成两个路口的证据。",
+        "几何连通不等于候选可跟踪或转向合法。"
+      ],
+      "view_sufficiency": "足够判定斜交四臂结构。",
+      "lane_change_status": "未核验",
+      "source_map": "scene-choice-inventory-v3/figures/S16_map.png",
+      "neutral_context": "intent-fusion-framework-v1/work/visual_classification_13_16.png"
+    }
+  ],
+  "source_sha256": "ce444d5bad0699990f3f903612aaaca2ccb2b591f70743cdc78494a6d54912b6"
+}

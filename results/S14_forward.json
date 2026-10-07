@@ -1,0 +1,458 @@
+{
+  "scene_id": "S14",
+  "safety_mode": "current_environment_prediction",
+  "result": {
+    "config": {
+      "alpha": 0.7,
+      "temperature": 2.0,
+      "sigma_deg": 15.0,
+      "tolerance_deg": 10.0,
+      "min_displacement_m": 1.0,
+      "normalization": "sigmoid",
+      "decision_rule": "score_reject",
+      "rejection_threshold": 0.75
+    },
+    "command": {
+      "active": true,
+      "angle_deg": 0.0
+    },
+    "normalization": "sigmoid",
+    "decision_rule": "score_reject",
+    "effective_temperature": 1.0,
+    "rejection_threshold": 0.75,
+    "direction_tolerance_applied": false,
+    "proposed_id": 6,
+    "proposed_score": 0.9947116158688873,
+    "proposed_error_deg": 0.06141526432273281,
+    "proposal_pool_count": 8,
+    "status": "accepted",
+    "reason": "环境检查通过候选中的最高融合分严格高于拒绝阈值；接受外部意图。",
+    "selected_id": 6,
+    "selected_error_deg": 0.06141526432273281,
+    "selected_score": 0.9947116158688873,
+    "selected_trajectory": [
+      [
+        1.3692071437835693,
+        -0.013709099031984806,
+        -0.000338296900736168
+      ],
+      [
+        3.127992868423462,
+        -0.012471853755414486,
+        -0.000422707264078781
+      ],
+      [
+        5.1989359855651855,
+        0.026275992393493652,
+        -0.0003580404445528984
+      ],
+      [
+        7.607193470001221,
+        -0.0007101334631443024,
+        -0.0004813761333934963
+      ],
+      [
+        10.268205642700195,
+        -0.0012481361627578735,
+        6.734104681527242e-05
+      ],
+      [
+        13.21401596069336,
+        -0.005980685353279114,
+        0.0008084436412900686
+      ],
+      [
+        16.273765563964844,
+        -0.026264352723956108,
+        0.0013837272999808192
+      ],
+      [
+        19.522409439086914,
+        0.02092605084180832,
+        0.0018156538717448711
+      ]
+    ],
+    "intent_satisfied": true,
+    "fallback_used": false,
+    "stop_requested": false,
+    "original_model_top1": 6,
+    "safe_model_top1": 6,
+    "model_only_output_id": 6,
+    "direction_only_output_id": 18,
+    "direction_only_proposed_id": 18,
+    "direction_only_score": 0.9999998668836095,
+    "direction_only_proposed_error_deg": 0.00773966276341298,
+    "direction_only_status": "accepted",
+    "pure_intent_top1": 3,
+    "safe_pure_intent_top1": 18,
+    "ungated_fused_top1": 6,
+    "environment_eligible_count": 8,
+    "intent_eligible_count": 1,
+    "rows": [
+      {
+        "id": 0,
+        "model_logit": -8.615579605102539,
+        "model_score": 0.0001812268768436648,
+        "intent_score": 0.9925735932502415,
+        "fused_score": 0.6948558833382221,
+        "error_deg": 1.8314895330413208,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 1.8314895330413226,
+        "net_displacement_m": 20.20361943591559,
+        "length_m": 20.211512536663278,
+        "mean_speed_mps": 5.0528781341658195,
+        "selected": false
+      },
+      {
+        "id": 1,
+        "model_logit": -7.421850204467773,
+        "model_score": 0.0005976841819592394,
+        "intent_score": 0.9999702767605666,
+        "fused_score": 0.7001584989869843,
+        "error_deg": 0.11565317345389303,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 0.11565317345390672,
+        "net_displacement_m": 28.638411690761036,
+        "length_m": 28.64782182838604,
+        "mean_speed_mps": 7.16195545709651,
+        "selected": false
+      },
+      {
+        "id": 2,
+        "model_logit": -6.749633312225342,
+        "model_score": 0.0011699386869932983,
+        "intent_score": 0.999924275642373,
+        "fused_score": 0.700297974555759,
+        "error_deg": 0.1846002469864061,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": -0.18460024698641525,
+        "net_displacement_m": 16.104692123268503,
+        "length_m": 16.10737186930472,
+        "mean_speed_mps": 4.02684296732618,
+        "selected": false
+      },
+      {
+        "id": 3,
+        "model_logit": -6.452160358428955,
+        "model_score": 0.001574627996257541,
+        "intent_score": 0.9999999933017224,
+        "fused_score": 0.7004723837100829,
+        "error_deg": 0.001736152334444796,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": -0.001736152334436994,
+        "net_displacement_m": 25.453844082120245,
+        "length_m": 25.457630275725222,
+        "mean_speed_mps": 6.3644075689313055,
+        "selected": false
+      },
+      {
+        "id": 4,
+        "model_logit": -7.356365203857422,
+        "model_score": 0.0006381076775872905,
+        "intent_score": 0.9999725691104172,
+        "fused_score": 0.7001722306805682,
+        "error_deg": 0.11110386859806454,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 0.11110386859805096,
+        "net_displacement_m": 34.64405851228237,
+        "length_m": 34.659983993787414,
+        "mean_speed_mps": 8.664995998446853,
+        "selected": false
+      },
+      {
+        "id": 5,
+        "model_logit": -8.863384246826172,
+        "model_score": 0.00014145545271008312,
+        "intent_score": 0.84957771988072,
+        "fused_score": 0.594746840552317,
+        "error_deg": 8.564877926034995,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 8.564877926035,
+        "net_displacement_m": 27.95237864066817,
+        "length_m": 28.057706326526077,
+        "mean_speed_mps": 7.014426581631519,
+        "selected": false
+      },
+      {
+        "id": 6,
+        "model_logit": 4.0216145515441895,
+        "model_score": 0.9823916104756915,
+        "intent_score": 0.999991618180257,
+        "fused_score": 0.9947116158688873,
+        "error_deg": 0.06141526432273281,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": true,
+        "selection_eligible": true,
+        "direction_deg": 0.06141526432272271,
+        "net_displacement_m": 19.52242065439001,
+        "length_m": 19.52340597385276,
+        "mean_speed_mps": 4.88085149346319,
+        "selected": true
+      },
+      {
+        "id": 7,
+        "model_logit": -9.060393333435059,
+        "model_score": 0.00011616377560166036,
+        "intent_score": 0.8434631963195816,
+        "fused_score": 0.5904590865563876,
+        "error_deg": 8.752574165568689,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 8.752574165568678,
+        "net_displacement_m": 19.55707512707262,
+        "length_m": 19.61428426042973,
+        "mean_speed_mps": 4.903571065107433,
+        "selected": false
+      },
+      {
+        "id": 8,
+        "model_logit": -6.778172969818115,
+        "model_score": 0.0011370584308209569,
+        "intent_score": 0.999938402619249,
+        "fused_score": 0.7002979993627205,
+        "error_deg": 0.16649226731709632,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 0.16649226731708971,
+        "net_displacement_m": 10.939427785088476,
+        "length_m": 10.943696396799096,
+        "mean_speed_mps": 2.735924099199774,
+        "selected": false
+      },
+      {
+        "id": 9,
+        "model_logit": -8.423755645751953,
+        "model_score": 0.0002195401975099444,
+        "intent_score": 0.912502838518815,
+        "fused_score": 0.6388178490224234,
+        "error_deg": 6.4190215197606335,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": -6.419021519760634,
+        "net_displacement_m": 18.57071090577685,
+        "length_m": 18.600809006047488,
+        "mean_speed_mps": 4.650202251511872,
+        "selected": false
+      },
+      {
+        "id": 10,
+        "model_logit": -9.820098876953125,
+        "model_score": 5.434525657762517e-05,
+        "intent_score": 0.8400716957724673,
+        "fused_score": 0.5880664906177003,
+        "error_deg": 8.855541621190753,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": -8.855541621190742,
+        "net_displacement_m": 19.92129210136436,
+        "length_m": 19.972383500928757,
+        "mean_speed_mps": 4.993095875232189,
+        "selected": false
+      },
+      {
+        "id": 11,
+        "model_logit": -7.120337009429932,
+        "model_score": 0.0008078411001529042,
+        "intent_score": 0.9973219728684121,
+        "fused_score": 0.6983677333379343,
+        "error_deg": 1.098512065278726,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 1.098512065278717,
+        "net_displacement_m": 40.62392896602666,
+        "length_m": 40.63836908539455,
+        "mean_speed_mps": 10.159592271348638,
+        "selected": false
+      },
+      {
+        "id": 12,
+        "model_logit": -7.367990970611572,
+        "model_score": 0.0006307367947805925,
+        "intent_score": 0.9999026166410991,
+        "fused_score": 0.7001210526872036,
+        "error_deg": 0.20934336730741165,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 0.2093433673074027,
+        "net_displacement_m": 29.675290775785882,
+        "length_m": 29.702104734448273,
+        "mean_speed_mps": 7.425526183612068,
+        "selected": false
+      },
+      {
+        "id": 13,
+        "model_logit": -7.768126487731934,
+        "model_score": 0.0004228261724038676,
+        "intent_score": 0.9987987970410307,
+        "fused_score": 0.6992860057804425,
+        "error_deg": 0.7354360894560159,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 0.7354360894560028,
+        "net_displacement_m": 19.15290299425853,
+        "length_m": 19.159286401934374,
+        "mean_speed_mps": 4.789821600483593,
+        "selected": false
+      },
+      {
+        "id": 14,
+        "model_logit": -5.647564888000488,
+        "model_score": 0.0035137031166038875,
+        "intent_score": 0.9999962741228778,
+        "fused_score": 0.7010515028209956,
+        "error_deg": 0.040946890339427,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": -0.0409468903394346,
+        "net_displacement_m": 18.67862415468958,
+        "length_m": 18.679656647186057,
+        "mean_speed_mps": 4.669914161796514,
+        "selected": false
+      },
+      {
+        "id": 15,
+        "model_logit": -5.347595691680908,
+        "model_score": 0.004737034455159776,
+        "intent_score": 0.9999755454999,
+        "fused_score": 0.7014039921864779,
+        "error_deg": 0.10490309624725569,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": -0.10490309624726227,
+        "net_displacement_m": 21.93425040241328,
+        "length_m": 21.935799242054102,
+        "mean_speed_mps": 5.483949810513526,
+        "selected": false
+      },
+      {
+        "id": 16,
+        "model_logit": -8.42956829071045,
+        "model_score": 0.00021826806762305066,
+        "intent_score": 0.8679694978823169,
+        "fused_score": 0.6076441289379086,
+        "error_deg": 7.982444333192348,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 7.982444333192354,
+        "net_displacement_m": 22.38513667105501,
+        "length_m": 22.455079525237615,
+        "mean_speed_mps": 5.613769881309404,
+        "selected": false
+      },
+      {
+        "id": 17,
+        "model_logit": -7.89792013168335,
+        "model_score": 0.00037137746818586604,
+        "intent_score": 0.9999859980128198,
+        "fused_score": 0.7001016118494295,
+        "error_deg": 0.07937845012361322,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 0.0793784501236107,
+        "net_displacement_m": 25.336671348981657,
+        "length_m": 25.347225067851056,
+        "mean_speed_mps": 6.336806266962764,
+        "selected": false
+      },
+      {
+        "id": 18,
+        "model_logit": -4.695112705230713,
+        "model_score": 0.009057057174272616,
+        "intent_score": 0.9999998668836095,
+        "fused_score": 0.7027170239708084,
+        "error_deg": 0.00773966276341298,
+        "eligible": true,
+        "safety_reasons": [],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": 0.0077396627634017485,
+        "net_displacement_m": 20.314438051552845,
+        "length_m": 20.314485245098755,
+        "mean_speed_mps": 5.078621311274689,
+        "selected": false
+      },
+      {
+        "id": 19,
+        "model_logit": -7.957345485687256,
+        "model_score": 0.0003499586666977862,
+        "intent_score": 0.934169025098529,
+        "fused_score": 0.6540233051689796,
+        "error_deg": 5.535706786986651,
+        "eligible": false,
+        "safety_reasons": [
+          "footprint_intersects_time_aligned_actor"
+        ],
+        "intent_eligible": false,
+        "selection_eligible": false,
+        "direction_deg": -5.535706786986644,
+        "net_displacement_m": 22.209921398281075,
+        "length_m": 22.235893947799436,
+        "mean_speed_mps": 5.558973486949859,
+        "selected": false
+      }
+    ]
+  }
+}

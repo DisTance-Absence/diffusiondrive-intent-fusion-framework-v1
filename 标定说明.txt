@@ -1,0 +1,85 @@
+外部方向请求的独立标注与探索性标定
+
+当前状态
+本轮只准备标注资料与流程。annotation_template.json 包含16个历史开发场景、每场7个固定方向请求，共112条，所有人工字段均为空。没有有效独立人工标签时，calibration.py 返回 not_calibrated 和 best_config=null，不执行参数搜索、不产生“最佳参数”。当前主页面的 alpha、rho 等仍是演示设置，不能称为已标定阈值。
+
+主页面参数对照
+index.html默认原生Sigmoid映射，保留Softmax对照；默认评分拒绝，保留历史方向容差规则作旧实验对照。原生Sigmoid固定T=1，页面温度参数仅影响Softmax。当前alpha=0.7、rho=0.75是开发演示设置，不是本轮拟合结果。
+展开alpha–rho敏感性表，可查看当前场景、当前方向、当前环境检查和当前分数映射下，权重与拒绝基准变化如何改变提议、接受/拒绝及回退。点击单元格只调整alpha与rho；不自动选择“最佳格子”。
+表格不是全库统计，也不表示任务成功率。无指令或历史容差模式时停用该表。固定alpha时提高rho只改变是否接受，不改变最高融合分提议；调alpha则可能改变提议ID。
+
+已检查的旧标签来源
+旧 rule-joystick-routing-v10/build_labels.py 根据官方 NC/DAC/TTC 与旧运动规则产生自动监督；它不是本轮人工方向请求接受/拒绝标签。旧 intent-routing-v5/data/calibration_stride_v2/finalize_labels.py 中独立可行性多为 unknown，不能把 unknown 改写成负样本。本轮 v3 场景资料的人工复核字段为空。相关脚本/协议检索未找到可直接使用、具有实际标注者身份与独立证据记录的本轮人类标签；此结论限于已检查资料，不是对所有历史文件逐字人工审阅的证明。
+
+标注对象与界面隔离
+先打开annotation.html，在不查看模型结果的情况下逐项填写并保存，再下载independent_intent_annotations.json。浏览器暂存不能代替下载文件；正式标定使用已填副本，保留原空白模板。
+每条样本是“当前场景中的一个外部方向请求”，不是单条模型轨迹。320条候选不能当作320个独立人工样本。方向定义为未来4秒终点相对当前后轴原点的位移方位角；正角向左、负角向右、0°为向前而不是停止。此轮没有目标速度，也不自动指定任何角度容差。标注者需要在goal中明确独立任务目标、目标区域或可接受的行为范围；范围不清楚时选择uncertain，不从模型输出反推。
+
+模板 contexts 只保存当前道路几何、当前actor标注、初速、已导出的道路路径和相关信号信息；不含候选轨迹、模型评分、guard结果或方法决定。地图路径也不是完整合法走法枚举。目标goal、理由reason与证据evidence_source应由标注者独立填写。不要打开评分页面后反推标签，也不要把专家轨迹、离线PDM或旧规则结果冒充人工判断。
+
+三种标签
+这些标签评价请求是否应被接受，并不单独证明方法实际选中的轨迹完成了目标。后续实验还需独立检查所选轨迹的目标区域到达或行为完成情况。
+accept：独立场景证据与任务目标支持该方向请求应被接受。
+reject：独立场景证据或任务目标明确说明不应接受。
+uncertain：缺少目标、路权、信号、4秒可达性或其它必要证据，无法判定。证据不足时保留 uncertain，不强行二分。
+仅道路平面几何无法保证4秒内可执行；当前actor速度也不是未来真值。建议盲审，并对分歧另行复核。程序只能校验声明与格式，不能证明标注者身份、判断正确性或盲审真实发生。
+
+需要填写的字段
+label = accept / reject / uncertain
+reason = 实际判断理由
+goal = 独立确认的任务目标、目标区域或可接受行为范围；范围不清楚时选uncertain
+annotator_id = 实际标注者标识，可用稳定匿名编号
+reviewed_at = 实际完成时间，ISO8601且带时区，例如 2026-10-07T14:30:00+08:00
+evidence_source = 实际查阅的当前资料及必要补充依据
+label_source = human_review
+independent_of_model_outputs = true，仅完成独立人工评阅后才可填写
+split = 留空，或在独立分组方案确定后填写 train / dev / test
+不可更改 record_id、scene_id、token、trip、group_id、context_id、command、完整instruction标注协议或来源/上下文哈希。校验时会逐项核对完整instruction；修改协议后不能作为同一协议的标注数据使用。模板文件保留空白；下载已填副本另存，不覆盖原模板。
+
+分组与防泄漏
+同一trip全部场景、方向请求必须进入同一个分区；不能把一个场景的七条请求随机拆到不同分区。split 默认留空，脚本不自动分组、不根据标签重新抽取“好分组”。可先人工冻结完整trip分配JSON：键为模板中的完整group_id（trip:...），值为train、dev或test；再用split命令生成另一个文件。必须为每个trip指定恰好一个分区。
+
+这16个场景已经反复用于开发。即使分出名叫test的分区，也不是此前未接触的独立测试集，报告固定声明 has_independent_test=false。没有新独立测试数据时，不泛化到全部道路场景，不声称部署安全阈值已验证。建议未来另收独立trip，再冻结扩展协议。
+
+预定标定规则
+先完成train和dev全部请求的人工评阅；uncertain保留在文件中但排除二元标定。train和dev均须同时包含accept与reject，否则不选参。测试记录可以暂未标注，测试标签和预测不进入任何参数排序。
+
+对sigmoid与softmax分别调用同一个fusion.fuse_candidates，不另写一套融合决策。固定 decision_rule=score_reject，使用当前预测guard；无方向候选不能接受。core严格按F>rho接受，F等于rho也拒绝并回退。sigmoid使用原始logit逐项归一；softmax按core温度规则归一。两者的分数均不因此成为已校准接受概率。
+
+每种normalization遍历alpha=0,0.1,...,1与rho=0,0.01,...,1。其它设置保持当前core默认，报告记录完整config和core哈希。
+第一步在train最小化等权类别错误：(误接受率+误拒绝率)/2。
+train并列顺序：误接受率更低、rho更高、alpha更低。
+第二步只在dev比较两个train赢家，不在dev重新搜索alpha/rho。dev并列顺序：等权类别错误更低、误接受率更低、sigmoid优先于softmax。
+这些规则用于可复现的探索性比较，不表示误接受与误拒绝具有相同的实际安全代价，也不是安全认证准则。
+
+指标定义
+误接受：人工reject，方法accepted。误接受率分母为人工reject数。
+误拒绝：人工accept，方法未accepted。误拒绝率分母为人工accept数。
+coverage：全部已纳入二元评估请求中方法accepted的比例；不是道路覆盖率。
+balanced_accuracy = 1 - (误接受率+误拒绝率)/2。缺少任一真实类别时返回null，不伪造平衡准确率。
+回退虽然可能仍输出模型轨迹，但仍是“本次意图未接受”，不得计为接受。
+
+CLI示例（在本目录运行；python需为可用Python环境）
+校验已填副本：
+python calibration.py validate --annotations independent_intent_annotations.json --output work/human_annotation_validation_01.json
+
+按已冻结trip分配生成副本：
+python calibration.py split --annotations independent_intent_annotations.json --assignments trip_split.json --output annotation_split.json
+
+探索性标定：
+python calibration.py calibrate --annotations annotation_split.json --output work/calibration_result.json
+
+当前空模板的预期结果：
+python calibration.py calibrate --annotations annotation_template.json --output work/calibration_status.json
+结果应为not_calibrated、best_config=null。缺标签不是程序错误。
+
+已有冻结参数后的测试评估：
+python calibration.py evaluate --annotations annotation_split.json --frozen-calibration work/calibration_result.json --output work/fixed_test_evaluation.json
+该命令只能用已选定参数，检查core/data哈希及trip重叠，不在test上调参。test请求必须已经完成评阅。未建立test组时该命令拒绝运行。
+
+所有输出默认只新建文件，已有同名输出会报错，避免覆盖标签与冻结报告。需要新一轮时另取文件名并保留旧版本。模板重建命令为：
+python calibration.py template --output annotation_template_new.json
+
+单元测试
+python test_calibration.py
+测试内生成的数据明确标为synthetic，并仅用于验证程序行为。生产CLI不提供接受合成标签的开关；合成测试结果不得混入本轮真实标签、标定指标或默认参数。

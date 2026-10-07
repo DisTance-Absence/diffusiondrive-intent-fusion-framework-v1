@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "scene_count": 16,
+  "candidate_count": 320,
+  "unchanged_scene_payloads": 16,
+  "unchanged_fixtures": 22,
+  "unchanged_algorithm_and_protocol_files": [
+    "fusion.py",
+    "safety.py",
+    "runtime_adapter.py",
+    "protocol.json"
+  ],
+  "categories": [
+    {
+      "id": "crossing_junction",
+      "label": "交叉路口",
+      "count": 7
+    },
+    {
+      "id": "branch_junction",
+      "label": "丁字/分岔路口",
+      "count": 4
+    },
+    {
+      "id": "roundabout",
+      "label": "环岛式道路",
+      "count": 2
+    },
+    {
+      "id": "curved_segment",
+      "label": "一般弯道路段",
+      "count": 1
+    },
+    {
+      "id": "straight_approach",
+      "label": "宽幅直路/路口接近段",
+      "count": 2
+    }
+  ],
+  "classification_does_not_certify_lane_changes": true,
+  "source_hashes_verified": true,
+  "scene_checks": [
+    {
+      "scene_id": "S01",
+      "unchanged_fusion_inputs": true,
+      "classification": "交叉路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S02",
+      "unchanged_fusion_inputs": true,
+      "classification": "交叉路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S03",
+      "unchanged_fusion_inputs": true,
+      "classification": "交叉路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S04",
+      "unchanged_fusion_inputs": true,
+      "classification": "交叉路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S05",
+      "unchanged_fusion_inputs": true,
+      "classification": "环岛式道路",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S06",
+      "unchanged_fusion_inputs": true,
+      "classification": "丁字/分岔路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S07",
+      "unchanged_fusion_inputs": true,
+      "classification": "丁字/分岔路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S08",
+      "unchanged_fusion_inputs": true,
+      "classification": "交叉路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S09",
+      "unchanged_fusion_inputs": true,
+      "classification": "丁字/分岔路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S10",
+      "unchanged_fusion_inputs": true,
+      "classification": "交叉路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S11",
+      "unchanged_fusion_inputs": true,
+      "classification": "丁字/分岔路口",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S12",
+      "unchanged_fusion_inputs": true,
+      "classification": "一般弯道路段",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S13",
+      "unchanged_fusion_inputs": true,
+      "classification": "宽幅直路/路口接近段",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S14",
+      "unchanged_fusion_inputs": true,
+      "classification": "宽幅直路/路口接近段",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S15",
+      "unchanged_fusion_inputs": true,
+      "classification": "环岛式道路",
+      "image_exists": true
+    },
+    {
+      "scene_id": "S16",
+      "unchanged_fusion_inputs": true,
+      "classification": "交叉路口",
+      "image_exists": true
+    }
+  ]
+}
